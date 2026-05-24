@@ -57,6 +57,80 @@
     .side-nav-link { transition: all 0.15s; }
     .side-nav-link.active { border-left:4px solid #775a19; padding-left:1rem; font-weight:700; color:#03192e !important; }
     .dark .side-nav-link.active { color:#f8fafc !important; }
+    .media-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .media-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(3,25,46,0.15); }
+    .media-type-badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; font-family:'Work Sans',sans-serif; }
+    .media-tab-btn { transition: all 0.2s; position:relative; }
+    .media-tab-btn.active { background:#03192e; color:#fff; }
+    .media-tab-btn.active::after { content:''; position:absolute; bottom:-8px; left:50%; transform:translateX(-50%); width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:6px solid #03192e; }
+    .audio-waveform { background: linear-gradient(90deg, #775a19 0%, #fed488 50%, #775a19 100%); height:3px; border-radius:2px; }
+    .pdf-embed-container { background:#f6f3ea; border:1px solid #c4c6cd; }
+    .dark .pdf-embed-container { background:#1e293b; border-color:#334155; }
+
+    /* LESSON FOLDER STYLES */
+    .lesson-folder {
+        border: 1px solid #c4c6cd;
+        transition: all 0.3s ease;
+    }
+    .dark .lesson-folder {
+        border-color: #334155;
+    }
+    .lesson-folder:hover {
+        border-color: #775a19;
+        box-shadow: 0 8px 24px rgba(3,25,46,0.08);
+    }
+    .lesson-header {
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+    .lesson-header:hover {
+        background: #f6f3ea;
+    }
+    .dark .lesson-header:hover {
+        background: #1e293b;
+    }
+    .lesson-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+    .lesson-content.open {
+        max-height: 5000px;
+        opacity: 1;
+    }
+    .lesson-tab-btn {
+        transition: all 0.2s;
+        border-bottom: 2px solid transparent;
+    }
+    .lesson-tab-btn.active {
+        border-bottom-color: #775a19;
+        color: #03192e;
+        font-weight: 600;
+    }
+    .dark .lesson-tab-btn.active {
+        color: #f8fafc;
+        border-bottom-color: #fed488;
+    }
+    .lesson-tab-btn:hover {
+        background: #f1eee5;
+    }
+    .dark .lesson-tab-btn:hover {
+        background: #334155;
+    }
+    .lesson-media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    .nlm-embed {
+        border: 1px solid #c4c6cd;
+        background: #f6f3ea;
+    }
+    .dark .nlm-embed {
+        border-color: #334155;
+        background: #1e293b;
+    }
 </style>
 </head>
 <body class="parchment-texture text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
@@ -69,6 +143,7 @@
         <a data-nav="about" class="nav-top-link text-[#775a19] dark:text-amber-400 font-semibold underline decoration-2 underline-offset-4 font-headline italic text-lg cursor-pointer" data-i18n="nav_about">About</a>
         <a data-nav="academic" class="nav-top-link text-[#03192e] dark:text-slate-300 opacity-80 hover:opacity-100 hover:text-[#775a19] transition-colors duration-300 font-headline italic text-lg cursor-pointer" data-i18n="nav_academic">Academic Work</a>
         <a data-nav="educational" class="nav-top-link text-[#03192e] dark:text-slate-300 opacity-80 hover:opacity-100 hover:text-[#775a19] transition-colors duration-300 font-headline italic text-lg cursor-pointer" data-i18n="nav_educational">Educational Apps</a>
+        <a data-nav="media" class="nav-top-link text-[#03192e] dark:text-slate-300 opacity-80 hover:opacity-100 hover:text-[#775a19] transition-colors duration-300 font-headline italic text-lg cursor-pointer" data-i18n="nav_media">Media</a>
     </nav>
     <div class="flex items-center space-x-3">
         <div class="flex border border-[#03192e]/20 dark:border-slate-600 overflow-hidden">
@@ -101,6 +176,10 @@
             <span class="material-symbols-outlined mr-4">devices</span>
             <span class="font-label text-sm uppercase tracking-wide" data-i18n="nav_educational">Educational Apps</span>
         </a>
+        <a data-side-nav="media" class="side-nav-link flex items-center py-3 pl-5 text-[#03192e]/60 dark:text-slate-400 hover:bg-[#e5e2da] dark:hover:bg-slate-800 hover:text-[#03192e] cursor-pointer">
+            <span class="material-symbols-outlined mr-4">perm_media</span>
+            <span class="font-label text-sm uppercase tracking-wide" data-i18n="nav_media">Media</span>
+        </a>
     </nav>
     <div class="px-6 mt-auto space-y-3">
         <a href="https://auth.academia.edu/DimitriosPorpatonelis" target="_blank"
@@ -127,6 +206,7 @@
             <a data-mobile-nav="about" class="block py-2 text-primary font-bold border-l-4 border-secondary pl-3 font-headline text-lg cursor-pointer" data-i18n="nav_about">About</a>
             <a data-mobile-nav="academic" class="block py-2 text-on-surface-variant/70 hover:text-primary pl-3 font-headline text-lg cursor-pointer" data-i18n="nav_academic">Academic Work</a>
             <a data-mobile-nav="educational" class="block py-2 text-on-surface-variant/70 hover:text-primary pl-3 font-headline text-lg cursor-pointer" data-i18n="nav_educational">Educational Apps</a>
+            <a data-mobile-nav="media" class="block py-2 text-on-surface-variant/70 hover:text-primary pl-3 font-headline text-lg cursor-pointer" data-i18n="nav_media">Media</a>
         </nav>
         <div class="p-6">
             <a href="https://auth.academia.edu/DimitriosPorpatonelis" target="_blank" class="block w-full text-center bg-primary text-on-primary py-3 font-label text-xs uppercase tracking-widest">Academia.edu</a>
@@ -186,11 +266,12 @@
 </div>
 
 <script>
+
 // ── TRANSLATIONS ──────────────────────────────────────
 const i18n = {
     en: {
         site_title:"The Scholarly Manuscript", nav_about:"About", nav_academic:"Academic Work",
-        nav_educational:"Educational Apps", archive_title:"The Archive", archive_sub:"Educator's Portfolio",
+        nav_educational:"Educational Apps", nav_media:"Media", archive_title:"The Archive", archive_sub:"Educator's Portfolio",
         academia_link:"Academia.edu", settings:"Theme", footer_contact:"Contact",
         photo_edit_title:"Edit Profile Photo", photo_url_label:"Photo URL", photo_file_label:"Upload File",
         or:"or", apply:"Apply", cancel:"Cancel", close:"Close",
@@ -246,10 +327,71 @@ const i18n = {
         a6d:"Firebase-connected React Three Fiber dashboard coordinating all six applications. Includes a 3D museum scene and serves as the central hub for lesson orchestration.",
         a6t:"Firebase · React",
         launch:"Launch App", github:"GitHub",
+        media_title:"Media & Resources",
+        media_sub:"Curated multimedia content organized by lesson — audio overviews, lecture slides, primary texts, and scholarly PDFs.",
+        media_tab_audio:"Audio", media_tab_slides:"Slides", media_tab_pdf:"PDF", media_tab_text:"Text",
+        lesson_1_title:"Lesson I: Paul and Dionysius the Areopagite",
+        lesson_1_desc:"Exploring the encounter between the Apostle Paul and Dionysius the Areopagite in Athens (Acts 17). Audio overview, primary texts, and scholarly commentary.",
+        lesson_2_title:"Lesson II: Chrysostom on Political Authority",
+        lesson_2_desc:"John Chrysostom's engagement with imperial power. Lecture audio, slide presentation, and comparative study materials.",
+        lesson_3_title:"Lesson III: The Seven Ecumenical Councils",
+        lesson_3_desc:"Comprehensive overview of all Seven Ecumenical Councils. Interactive slides, dissertation excerpts, and patristic sources.",
+        lesson_4_title:"Lesson IV: Byzantine Church-State Relations",
+        lesson_4_desc:"The symphonic relationship between Emperor and Patriarch from Constantine to Justinian. Slides, PDF studies, and primary source texts.",
+        m1_title:"Paul and Dionysius the Areopagite",
+        m1_sub:"A NotebookLM Audio Overview exploring the encounter between the Apostle Paul and Dionysius the Areopagite in Athens (Acts 17).",
+        m1_type:"NotebookLM Audio Overview",
+        m1_desc:"Generated via Google NotebookLM. This AI-generated podcast examines the theological significance of Paul's Areopagus speech and the tradition of Dionysius as the first bishop of Athens. Primary sources: Acts 17, Patristic commentaries.",
+        m1_date:"May 2026",
+        m2_title:"Chrysostom on Political Authority",
+        m2_sub:"Audio lecture series on John Chrysostom's engagement with imperial power.",
+        m2_type:"Lecture Audio",
+        m2_desc:"Recorded lecture exploring Chrysostom's homilies on the relationship between Church and State in 4th-century Constantinople.",
+        m2_date:"March 2026",
+        s1_title:"The Seven Ecumenical Councils",
+        s1_sub:"Interactive Google Slides presentation for classroom use.",
+        s1_type:"Google Slides",
+        s1_desc:"Comprehensive slide deck covering all Seven Ecumenical Councils with maps, timelines, and key theological decisions. Designed for undergraduate theology courses.",
+        s1_date:"April 2026",
+        s2_title:"Byzantine Church-State Relations",
+        s2_sub:"Lecture slides on the symphonic relationship between Emperor and Patriarch.",
+        s2_type:"Google Slides",
+        s2_desc:"Examines the concept of symphonia from Constantine to Justinian, with primary source excerpts from Eusebius, Theodoret, and Justinian's Novellae.",
+        s2_date:"February 2026",
+        d1_title:"Sanctity and Imperial Authority (Dissertation)",
+        d1_sub:"Full doctoral dissertation — PDF.",
+        d1_type:"PDF · 2.4 MB",
+        d1_desc:"Complete doctoral thesis examining the intersection of political power and holiness in early Church writings during the period of the Seven Ecumenical Councils.",
+        d1_date:"2023",
+        d2_title:"God and the Existence of Evil",
+        d2_sub:"John Chrysostom \"On the Devil\" — Free PDF.",
+        d2_type:"PDF · 1.8 MB",
+        d2_desc:"Published work in the Theology in Public series. Available free on Apple Books, Kobo, and as direct PDF download.",
+        d2_date:"2024",
+        d3_title:"The Attitude of the Great Fathers",
+        d3_sub:"Study on Basil, Chrysostom, and Gregory the Theologian.",
+        d3_type:"PDF · 3.1 MB",
+        d3_desc:"Comparative study of how the Cappadocian Fathers and Chrysostom navigated imperial authority. Includes extensive primary source appendices.",
+        d3_date:"2025",
+        tx1_title:"The Areopagus Speech — Greek Text",
+        tx1_sub:"Acts 17:16–34 with patristic commentary excerpts.",
+        tx1_type:"Primary Text · Greek/English",
+        tx1_desc:"Bilingual presentation of Paul's Areopagus speech with selections from John Chrysostom's Homilies on Acts and later Byzantine commentators. Includes vocabulary notes for students.",
+        tx1_date:"May 2026",
+        tx2_title:"Dionysius the Areopagite — Tradition and Sources",
+        tx2_sub:"Historical overview of the Dionysian corpus and its reception.",
+        tx2_type:"Scholarly Article",
+        tx2_desc:"Critical examination of the Pseudo-Dionysian corpus and its influence on Byzantine mystical theology. Traces the development from the historical Dionysius to the Neoplatonic synthesis of the 5th–6th centuries.",
+        tx2_date:"April 2026",
+        view_pdf:"View PDF", download:"Download", listen:"Listen", view_slides:"View Slides", read:"Read",
+        expand_lesson:"Expand Lesson", collapse_lesson:"Collapse Lesson",
+        lesson_audio:"Audio", lesson_slides:"Slides", lesson_pdf:"PDF", lesson_text:"Text",
+        nlm_open:"Open in NotebookLM",
+        nlm_desc:"AI-generated podcast from Google NotebookLM. Click to listen in a new tab.",
     },
     gr: {
         site_title:"Το Επιστημονικό Χειρόγραφο", nav_about:"Προφίλ", nav_academic:"Ακαδημαϊκό Έργο",
-        nav_educational:"Εκπαιδευτικές Εφαρμογές", archive_title:"Το Αρχείο", archive_sub:"Χαρτοφυλάκιο Εκπαιδευτικού",
+        nav_educational:"Εκπαιδευτικές Εφαρμογές", nav_media:"Πολυμέσα", archive_title:"Το Αρχείο", archive_sub:"Χαρτοφυλάκιο Εκπαιδευτικού",
         academia_link:"Academia.edu", settings:"Θέμα", footer_contact:"Επικοινωνία",
         photo_edit_title:"Επεξεργασία Φωτογραφίας", photo_url_label:"URL Φωτογραφίας", photo_file_label:"Μεταφόρτωση Αρχείου",
         or:"ή", apply:"Εφαρμογή", cancel:"Ακύρωση", close:"Κλείσιμο",
@@ -305,6 +447,67 @@ const i18n = {
         a6d:"Dashboard Firebase + React Three Fiber που συντονίζει τις έξι εφαρμογές. Τρισδιάστατη σκηνή μουσείου και κεντρική διαχείριση περιεχομένου.",
         a6t:"Firebase · React",
         launch:"Εκκίνηση", github:"GitHub",
+        media_title:"Πολυμέσα & Υλικό",
+        media_sub:"Επιμελημένο πολυμεσικό περιεχόμενο οργανωμένο ανά μάθημα — audio overviews, διαλέξεις, πρωτογενή κείμενα και ακαδημαϊκά PDF.",
+        media_tab_audio:"Ήχος", media_tab_slides:"Διαφάνειες", media_tab_pdf:"PDF", media_tab_text:"Κείμενο",
+        lesson_1_title:"Μάθημα Ι: Παύλος και Διονύσιος ο Αρεοπαγίτης",
+        lesson_1_desc:"Εξερεύνηση της συνάντησης του Αποστόλου Παύλου και του Διονυσίου του Αρεοπαγίτη στην Αθήνα (Πράξ. 17). Audio overview, πρωτογενή κείμενα και πατερικά σχόλια.",
+        lesson_2_title:"Μάθημα ΙΙ: Χρυσόστομος και Πολιτική Εξουσία",
+        lesson_2_desc:"Η αντιμετώπιση της αυτοκρατορικής εξουσίας από τον Ιωάννη Χρυσόστομο. Ηχογράφηση διάλεξης, διαφάνειες και συγκριτικό υλικό.",
+        lesson_3_title:"Μάθημα ΙΙΙ: Οι Επτά Οικουμενικές Σύνοδοι",
+        lesson_3_desc:"Πλήρης επισκόπηση των Επτά Οικουμενικών Συνόδων. Διαδραστικές διαφάνειες, αποσπάσματα διατριβής και πατερικές πηγές.",
+        lesson_4_title:"Μάθημα ΙV: Βυζαντινές Σχέσεις Εκκλησίας–Κράτους",
+        lesson_4_desc:"Η συμφωνική σχέση Αυτοκράτορα και Πατριάρχη από τον Κωνσταντίνο μέχρι τον Ιουστινιανό. Διαφάνειες, PDF μελέτες και πρωτογενή κείμενα.",
+        m1_title:"Παύλος και Διονύσιος ο Αρεοπαγίτης",
+        m1_sub:"NotebookLM Audio Overview για τη συνάντηση του Αποστόλου Παύλου και του Διονυσίου του Αρεοπαγίτη στην Αθήνα (Πράξ. 17).",
+        m1_type:"NotebookLM Audio Overview",
+        m1_desc:"Δημιουργήθηκε μέσω Google NotebookLM. Αυτό το AI podcast εξετάζει τη θεολογική σημασία του λόγου του Παύλου στον Άρειο Πάγο και την παράδοση του Διονυσίου ως πρώτου επισκόπου Αθηνών. Πρωτογενείς πηγές: Πράξ. 17, Πατερικά σχόλια.",
+        m1_date:"Μάιος 2026",
+        m2_title:"Χρυσόστομος και Πολιτική Εξουσία",
+        m2_sub:"Σειρά διαλέξεων για την αντιμετώπιση της αυτοκρατορικής εξουσίας από τον Ιωάννη Χρυσόστομο.",
+        m2_type:"Ηχογράφηση Διάλεξης",
+        m2_desc:"Ηχογραφημένη διάλεξη που εξερευνά τις ομιλίες του Χρυσοστόμου για τη σχέση Εκκλησίας και Κράτους στην Κωνσταντινούπολη του 4ου αιώνα.",
+        m2_date:"Μάρτιος 2026",
+        s1_title:"Οι Επτά Οικουμενικές Σύνοδοι",
+        s1_sub:"Διαδραστική παρουσίαση Google Slides για αίθουσα διδασκαλίας.",
+        s1_type:"Google Slides",
+        s1_desc:"Πλήρες σετ διαφανειών που καλύπτει και τις Επτά Οικουμενικές Συνόδους με χάρτες, χρονολόγια και βασικές θεολογικές αποφάσεις. Σχεδιασμένο για προπτυχιακά μαθήματα θεολογίας.",
+        s1_date:"Απρίλιος 2026",
+        s2_title:"Βυζαντινές Σχέσεις Εκκλησίας–Κράτους",
+        s2_sub:"Διαφάνειες διαλέξεων για τη συμφωνική σχέση Αυτοκράτορα και Πατριάρχη.",
+        s2_type:"Google Slides",
+        s2_desc:"Εξετάζει την έννοια της συμφωνίας από τον Κωνσταντίνο μέχρι τον Ιουστινιανό, με αποσπάσματα πρωτογενών πηγών από τον Ευσέβιο, τον Θεοδώρητο και τα Νεαρά του Ιουστινιανού.",
+        s2_date:"Φεβρουάριος 2026",
+        d1_title:"Αγιότητα και Αυτοκρατορική Εξουσία (Διατριβή)",
+        d1_sub:"Πλήρης διδακτορική διατριβή — PDF.",
+        d1_type:"PDF · 2,4 MB",
+        d1_desc:"Πλήρης διδακτορική διατριβή που εξετάζει τη συνάντηση πολιτικής εξουσίας και αγιότητας στην εκκλησιαστική γραμματεία κατά την περίοδο των Επτά Οικουμενικών Συνόδων.",
+        d1_date:"2023",
+        d2_title:"Θεός και ύπαρξη του κακού",
+        d2_sub:"Ιωάννης Χρυσόστομος «Περί Διαβόλου» — Δωρεάν PDF.",
+        d2_type:"PDF · 1,8 MB",
+        d2_desc:"Δημοσιευμένο έργο της σειράς Theology in Public. Διαθέσιμο δωρεάν σε Apple Books, Kobo και ως άμεση λήψη PDF.",
+        d2_date:"2024",
+        d3_title:"Η στάση των Μεγάλων Πατέρων",
+        d3_sub:"Μελέτη για τον Μέγα Βασίλειο, τον Χρυσόστομο και τον Γρηγόριο Θεολόγο.",
+        d3_type:"PDF · 3,1 MB",
+        d3_desc:"Συγκριτική μελέτη του τρόπου με τον οποίο οι Καππαδόκες Πατέρες και ο Χρυσόστομος διαχειρίστηκαν την αυτοκρατορική εξουσία. Περιλαμβάνει εκτενή παραρτήματα πρωτογενών πηγών.",
+        d3_date:"2025",
+        tx1_title:"Ο Λόγος στον Άρειο Πάγο — Ελληνικό Κείμενο",
+        tx1_sub:"Πράξ. 17:16–34 με αποσπάσματα πατερικών σχολίων.",
+        tx1_type:"Πρωτογενές Κείμενο · Ελληνικά/Αγγλικά",
+        tx1_desc:"Δίγλωσση παρουσίαση του λόγου του Παύλου στον Άρειο Πάγο με επιλογές από τις Ομιλίες του Ιωάννη Χρυσοστόμου στις Πράξεις και μεταγενέστερους Βυζαντινούς σχολιαστές. Περιλαμβάνει λεξιλογικές σημειώσεις για φοιτητές.",
+        tx1_date:"Μάιος 2026",
+        tx2_title:"Διονύσιος ο Αρεοπαγίτης — Παράδοση και Πηγές",
+        tx2_sub:"Ιστορική επισκόπηση του Διονυσιακού corpus και της αποδοχής του.",
+        tx2_type:"Επιστημονικό Άρθρο",
+        tx2_desc:"Κριτική εξέταση του corpus του Ψευδο-Διονυσίου και της επιρροής του στη Βυζαντινή μυστική θεολογία. Παρακολουθεί την εξέλιξη από τον ιστορικό Διονύσιο μέχρι τη νεοπλατωνική σύνθεση του 5ου–6ου αιώνα.",
+        tx2_date:"Απρίλιος 2026",
+        view_pdf:"Προβολή PDF", download:"Λήψη", listen:"Ακρόαση", view_slides:"Προβολή Διαφανειών", read:"Ανάγνωση",
+        expand_lesson:"Ανάπτυξη Μαθήματος", collapse_lesson:"Σύμπτυξη Μαθήματος",
+        lesson_audio:"Ήχος", lesson_slides:"Διαφάνειες", lesson_pdf:"PDF", lesson_text:"Κείμενο",
+        nlm_open:"Άνοιγμα στο NotebookLM",
+        nlm_desc:"AI podcast από Google NotebookLM. Κάντε κλικ για ακρόαση σε νέα καρτέλα.",
     }
 };
 
@@ -368,16 +571,16 @@ function updatePhoto(){
 }
 
 // ── SVG PLACEHOLDER ───────────────────────────────────
-const PLACEHOLDER_PHOTO = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='320' viewBox='0 0 256 320'%3E%3Crect width='256' height='320' fill='%23e5e2da'/%3E%3Ccircle cx='128' cy='120' r='60' fill='%23c4c6cd'/%3E%3Cellipse cx='128' cy='290' rx='90' ry='70' fill='%23c4c6cd'/%3E%3Ctext x='128' y='260' text-anchor='middle' fill='%2374777d' font-family='serif' font-size='11'%3EClick to add photo%3C/text%3E%3C/svg%3E`;
+const PLACEHOLDER_PHOTO = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='320' viewBox='0 0 256 320'%3E%3Crect width='256' height='320' fill='%23e5e2da'/%3E%3Ccircle cx='128' cy='120' r='60' fill='%23c4c6cd'/%3E%3Cellipse cx='128' cy='290' rx='90' ry='70' fill='%23c4c6cd'/%3E%3Ctext x='128' y='260' text-anchor='middle' fill='%2374777d' font-family='serif' font-size='11'%3EClick to add photo%3C/text%3E%3C/svg%3E";
 
 // ── APP SCREENSHOTS (inline SVG) ──────────────────────
 const screenshots = {
-    a1:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%2303192e'/%3E%3Ccircle cx='240' cy='100' r='55' fill='%23775a19' opacity='0.25'/%3E%3Ccircle cx='240' cy='100' r='30' fill='%23775a19' opacity='0.4'/%3E%3Ccircle cx='155' cy='155' r='12' fill='%23fed488' opacity='0.4'/%3E%3Ccircle cx='325' cy='145' r='10' fill='%23fed488' opacity='0.4'/%3E%3Cline x1='240' y1='100' x2='155' y2='155' stroke='%23fed488' stroke-width='1' opacity='0.2'/%3E%3Cline x1='240' y1='100' x2='325' y2='145' stroke='%23fed488' stroke-width='1' opacity='0.2'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fed488' font-family='Georgia,serif' font-size='16' font-style='italic'%3EMind Palace%3C/text%3E%3C/svg%3E`,
-    a2:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%231a2e44'/%3E%3Cellipse cx='240' cy='160' rx='200' ry='35' fill='%23334155' opacity='0.6'/%3E%3Crect x='200' y='60' width='80' height='100' fill='%2343474d' opacity='0.5' rx='2'/%3E%3Ccircle cx='240' cy='60' r='25' fill='%2343474d' opacity='0.6'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23b4c8e4' font-family='Georgia,serif' font-size='16' font-style='italic'%3EHistory Explorer 3D%3C/text%3E%3C/svg%3E`,
-    a3:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23f6f3ea'/%3E%3Cellipse cx='240' cy='120' rx='210' ry='95' fill='%23dde8c0' opacity='0.5'/%3E%3Ccircle cx='180' cy='95' r='7' fill='%23775a19'/%3E%3Ccircle cx='305' cy='135' r='7' fill='%23775a19'/%3E%3Ccircle cx='140' cy='155' r='7' fill='%23775a19'/%3E%3Ccircle cx='350' cy='80' r='7' fill='%23775a19'/%3E%3Cline x1='180' y1='95' x2='305' y2='135' stroke='%23775a19' stroke-width='1.5' opacity='0.4'/%3E%3Cline x1='140' y1='155' x2='180' y2='95' stroke='%23775a19' stroke-width='1.5' opacity='0.4'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%2303192e' font-family='Georgia,serif' font-size='16' font-style='italic'%3ETimeline Map%3C/text%3E%3C/svg%3E`,
-    a4:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23352b22'/%3E%3Crect x='55' y='50' width='370' height='9' rx='2' fill='%23775a19' opacity='0.6'/%3E%3Crect x='55' y='75' width='280' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='93' width='330' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='111' width='200' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='138' width='310' height='6' rx='2' fill='%23fed488' opacity='0.18'/%3E%3Crect x='55' y='156' width='250' height='6' rx='2' fill='%23fed488' opacity='0.18'/%3E%3Crect x='55' y='174' width='280' height='6' rx='2' fill='%23775a19' opacity='0.35'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fed488' font-family='Georgia,serif' font-size='16' font-style='italic'%3ELiving Anchor%3C/text%3E%3C/svg%3E`,
-    a5:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23775a19'/%3E%3Crect x='150' y='30' width='180' height='150' fill='%23fed488' opacity='0.15' rx='2'/%3E%3Crect x='165' y='50' width='150' height='9' fill='%23fed488' opacity='0.5'/%3E%3Crect x='165' y='72' width='110' height='5' fill='%23fed488' opacity='0.3'/%3E%3Crect x='165' y='86' width='130' height='5' fill='%23fed488' opacity='0.3'/%3E%3Crect x='165' y='100' width='90' height='5' fill='%23fed488' opacity='0.3'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fff' font-family='Georgia,serif' font-size='16' font-style='italic'%3EInteractive Books%3C/text%3E%3C/svg%3E`,
-    a6:`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%230f172a'/%3E%3Crect x='35' y='35' width='190' height='75' fill='%231e293b' rx='2'/%3E%3Crect x='255' y='35' width='190' height='75' fill='%231e293b' rx='2'/%3E%3Crect x='35' y='128' width='410' height='75' fill='%231e293b' rx='2'/%3E%3Ccircle cx='130' cy='72' r='18' fill='%234c6078' opacity='0.5'/%3E%3Ccircle cx='350' cy='72' r='18' fill='%234c6078' opacity='0.5'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23b4c8e4' font-family='Georgia,serif' font-size='16' font-style='italic'%3ECentral Console%3C/text%3E%3C/svg%3E`
+    a1:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%2303192e'/%3E%3Ccircle cx='240' cy='100' r='55' fill='%23775a19' opacity='0.25'/%3E%3Ccircle cx='240' cy='100' r='30' fill='%23775a19' opacity='0.4'/%3E%3Ccircle cx='155' cy='155' r='12' fill='%23fed488' opacity='0.4'/%3E%3Ccircle cx='325' cy='145' r='10' fill='%23fed488' opacity='0.4'/%3E%3Cline x1='240' y1='100' x2='155' y2='155' stroke='%23fed488' stroke-width='1' opacity='0.2'/%3E%3Cline x1='240' y1='100' x2='325' y2='145' stroke='%23fed488' stroke-width='1' opacity='0.2'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fed488' font-family='Georgia,serif' font-size='16' font-style='italic'%3EMind Palace%3C/text%3E%3C/svg%3E",
+    a2:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%231a2e44'/%3E%3Cellipse cx='240' cy='160' rx='200' ry='35' fill='%23334155' opacity='0.6'/%3E%3Crect x='200' y='60' width='80' height='100' fill='%2343474d' opacity='0.5' rx='2'/%3E%3Ccircle cx='240' cy='60' r='25' fill='%2343474d' opacity='0.6'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23b4c8e4' font-family='Georgia,serif' font-size='16' font-style='italic'%3EHistory Explorer 3D%3C/text%3E%3C/svg%3E",
+    a3:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23f6f3ea'/%3E%3Cellipse cx='240' cy='120' rx='210' ry='95' fill='%23dde8c0' opacity='0.5'/%3E%3Ccircle cx='180' cy='95' r='7' fill='%23775a19'/%3E%3Ccircle cx='305' cy='135' r='7' fill='%23775a19'/%3E%3Ccircle cx='140' cy='155' r='7' fill='%23775a19'/%3E%3Ccircle cx='350' cy='80' r='7' fill='%23775a19'/%3E%3Cline x1='180' y1='95' x2='305' y2='135' stroke='%23775a19' stroke-width='1.5' opacity='0.4'/%3E%3Cline x1='140' y1='155' x2='180' y2='95' stroke='%23775a19' stroke-width='1.5' opacity='0.4'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%2303192e' font-family='Georgia,serif' font-size='16' font-style='italic'%3ETimeline Map%3C/text%3E%3C/svg%3E",
+    a4:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23352b22'/%3E%3Crect x='55' y='50' width='370' height='9' rx='2' fill='%23775a19' opacity='0.6'/%3E%3Crect x='55' y='75' width='280' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='93' width='330' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='111' width='200' height='6' rx='2' fill='%23fed488' opacity='0.25'/%3E%3Crect x='55' y='138' width='310' height='6' rx='2' fill='%23fed488' opacity='0.18'/%3E%3Crect x='55' y='156' width='250' height='6' rx='2' fill='%23fed488' opacity='0.18'/%3E%3Crect x='55' y='174' width='280' height='6' rx='2' fill='%23775a19' opacity='0.35'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fed488' font-family='Georgia,serif' font-size='16' font-style='italic'%3ELiving Anchor%3C/text%3E%3C/svg%3E",
+    a5:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%23775a19'/%3E%3Crect x='150' y='30' width='180' height='150' fill='%23fed488' opacity='0.15' rx='2'/%3E%3Crect x='165' y='50' width='150' height='9' fill='%23fed488' opacity='0.5'/%3E%3Crect x='165' y='72' width='110' height='5' fill='%23fed488' opacity='0.3'/%3E%3Crect x='165' y='86' width='130' height='5' fill='%23fed488' opacity='0.3'/%3E%3Crect x='165' y='100' width='90' height='5' fill='%23fed488' opacity='0.3'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23fff' font-family='Georgia,serif' font-size='16' font-style='italic'%3EInteractive Books%3C/text%3E%3C/svg%3E",
+    a6:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='240'%3E%3Crect width='480' height='240' fill='%230f172a'/%3E%3Crect x='35' y='35' width='190' height='75' fill='%231e293b' rx='2'/%3E%3Crect x='255' y='35' width='190' height='75' fill='%231e293b' rx='2'/%3E%3Crect x='35' y='128' width='410' height='75' fill='%231e293b' rx='2'/%3E%3Ccircle cx='130' cy='72' r='18' fill='%234c6078' opacity='0.5'/%3E%3Ccircle cx='350' cy='72' r='18' fill='%234c6078' opacity='0.5'/%3E%3Ctext x='240' y='215' text-anchor='middle' fill='%23b4c8e4' font-family='Georgia,serif' font-size='16' font-style='italic'%3ECentral Console%3C/text%3E%3C/svg%3E"
 };
 
 // ── ABOUT ─────────────────────────────────────────────
@@ -426,9 +629,7 @@ function aboutTemplate(){
         </div>
       </div>
       <div class="p-8 lg:p-14 bg-surface-container dark:bg-slate-900/60">
-        <p class="font-body text-base text-on-surface-variant dark:text-slate-300 mb-10 leading-relaxed italic border-l-4 border-secondary pl-5">
-          <span class="font-headline text-5xl text-secondary float-left mr-2 mt-0 leading-[0.85]">D</span>${t('about_bio')}
-        </p>
+        <p class="font-body text-base text-on-surface-variant dark:text-slate-300 mb-10 leading-relaxed italic border-l-4 border-secondary pl-5">${t('about_bio')}</p>
         <h2 class="font-label text-[10px] uppercase tracking-[0.3em] text-secondary mb-8">The Intellectual Ledger</h2>
         <div class="space-y-9">
           <div class="group cursor-pointer" data-ledger="patristics">
@@ -503,12 +704,12 @@ function academicTemplate(){
 // ── EDUCATIONAL ───────────────────────────────────────
 function educationalTemplate(){
     const apps = [
-        { k:'a1', icon:'psychology_alt', bg:'bg-[#03192e]', tc:'text-amber-200' },
-        { k:'a2', icon:'videogame_asset', bg:'bg-[#1a2e44]', tc:'text-blue-200' },
-        { k:'a3', icon:'map', bg:'bg-[#2d4a1e]', tc:'text-green-200' },
-        { k:'a4', icon:'text_snippet', bg:'bg-[#352b22]', tc:'text-amber-200' },
-        { k:'a5', icon:'auto_stories', bg:'bg-[#775a19]', tc:'text-yellow-100' },
-        { k:'a6', icon:'dashboard', bg:'bg-[#0f172a]', tc:'text-blue-200' },
+        { k:'a1', icon:'psychology_alt', bg:'bg-[#03192e]', tc:'text-amber-200', url:'https://dporpatonelis-crypto.github.io/mind-palace-cases/', github:'https://github.com/dporpatonelis-crypto/mind-palace-cases' },
+        { k:'a2', icon:'videogame_asset', bg:'bg-[#1a2e44]', tc:'text-blue-200', url:'https://history-explorer-3d.vercel.app/', github:'#' },
+        { k:'a3', icon:'map', bg:'bg-[#2d4a1e]', tc:'text-green-200', url:'https://dporpatonelis-crypto.github.io/Map-Timeline/', github:'https://github.com/dporpatonelis-crypto/Map-Timeline' },
+        { k:'a4', icon:'text_snippet', bg:'bg-[#352b22]', tc:'text-amber-200', url:'https://idea-weaver-board.vercel.app/', github:'#' },
+        { k:'a5', icon:'auto_stories', bg:'bg-[#775a19]', tc:'text-yellow-100', url:'https://dporpatonelis-crypto.github.io/interactive-books/index.html', github:'https://github.com/dporpatonelis-crypto/interactive-books' },
+        { k:'a6', icon:'dashboard', bg:'bg-[#0f172a]', tc:'text-blue-200', url:'#', github:'#' },
     ];
     return `<div class="max-w-6xl mx-auto">
     <h1 class="font-headline text-5xl italic text-primary dark:text-slate-100 border-l-8 border-secondary pl-6 mb-6">${t('edu_title')}</h1>
@@ -531,16 +732,486 @@ function educationalTemplate(){
         </div>
         <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed flex-1 mb-5">${t(a.k+'d')}</p>
         <div class="flex gap-3 mt-auto pt-4 border-t border-outline-variant/20">
-          <a href="#" class="flex-1 text-center bg-primary text-on-primary py-2 font-label text-[10px] uppercase tracking-widest hover:bg-primary-container transition-colors">${t('launch')}</a>
-          <a href="#" class="flex items-center gap-1 border border-primary/30 px-4 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+          <a href="${a.url}" target="_blank" class="flex-1 text-center bg-primary text-on-primary py-2 font-label text-[10px] uppercase tracking-widest hover:bg-primary-container transition-colors">${t('launch')}</a>
+          <a href="${a.github}" target="_blank" class="flex items-center gap-1 border border-primary/30 px-4 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
             <span class="material-symbols-outlined text-sm">code</span>${t('github')}
           </a>
         </div>
       </div>
     </div>`).join('')}
     </div>
-    <p class="mt-10 font-label text-[9px] uppercase tracking-widest text-on-surface-variant/40 text-center">Replace # links above with your actual GitHub Pages deployment URLs</p>
+
+    <section class="mt-20 mb-4">
+      <div class="flex items-center gap-4 mb-8 border-b border-outline-variant/20 pb-4">
+        <span class="material-symbols-outlined text-3xl text-secondary">play_circle</span>
+        <h2 class="font-headline text-3xl italic text-primary dark:text-slate-100">Demo Video</h2>
+      </div>
+      <div class="bg-surface-container-low dark:bg-slate-800 p-6 border border-outline-variant/20 dark:border-slate-700">
+        <div class="relative w-full" style="padding-top: 56.25%;">
+          <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Ftr5AbtSxWE?si=KR_zivqiwIqMX6Ij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
     </div>`;
+}
+
+// ── MEDIA & RESOURCES — LESSON FOLDERS ─────────────────
+function mediaTemplate(){
+    const lessons = [
+        {
+            id: 'lesson1',
+            titleKey: 'lesson_1_title',
+            descKey: 'lesson_1_desc',
+            color: '#03192e',
+            accent: '#fed488',
+            media: {
+                audio: [
+                    {
+                        title: t('m1_title'),
+                        subtitle: t('m1_sub'),
+                        type: t('m1_type'),
+                        desc: t('m1_desc'),
+                        date: t('m1_date'),
+                        icon: 'headphones',
+                        nlmUrl: 'https://notebooklm.google.com/notebook/03a7f421-addd-4494-b879-cd380a4d4316/artifact/3d66a6d4-db1d-445d-af33-6eae970aa938?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_2&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_2_',
+                        isNLM: true
+                    }
+                ],
+                slides: [],
+                pdf: [
+                    {
+                        title: t('d2_title'),
+                        subtitle: t('d2_sub'),
+                        type: t('d2_type'),
+                        desc: t('d2_desc'),
+                        date: t('d2_date'),
+                        icon: 'description',
+                        pdfUrl: 'https://auth.academia.edu/download/placeholder2.pdf',
+                        viewerUrl: 'https://docs.google.com/viewer?url=https://auth.academia.edu/download/placeholder2.pdf&embedded=true'
+                    }
+                ],
+                text: [
+                    {
+                        title: t('tx1_title'),
+                        subtitle: t('tx1_sub'),
+                        type: t('tx1_type'),
+                        desc: t('tx1_desc'),
+                        date: t('tx1_date'),
+                        icon: 'article',
+                        content: `<div class="font-body text-sm leading-relaxed space-y-4">
+                            <p class="text-on-surface-variant dark:text-slate-300 italic border-l-4 border-secondary pl-4">
+                                «Ἐν δὲ ταῖς Ἀθήναις ἐκδεχομένων αὐτοὺς ἡμῶν, παρεκίνησε τὸ πνεῦμα τοῦ Παύλου ἐν αὐτῷ, θεωροῦντος κατείδωλον οὖσαν τὴν πόλιν.»
+                            </p>
+                            <p class="text-on-surface-variant dark:text-slate-300">
+                                (Πράξεις τῶν Ἀποστόλων 17:16)
+                            </p>
+                            <div class="bg-surface-container dark:bg-slate-800 p-4 mt-4">
+                                <h4 class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2">Patristic Commentary</h4>
+                                <p class="text-on-surface-variant dark:text-slate-400 text-xs leading-relaxed">
+                                    John Chrysostom, Homilies on Acts, Homily 36: «Οὐκ εἶπεν, ἠγανάκτησεν, ἀλλὰ, παρεκίνησε· τουτέστιν, ἐταράχθη, ἐνεθουσιάσθη· οὐχ ὡς ὀργισθείς, ἀλλ' ὡς ζηλώσας.»
+                                </p>
+                            </div>
+                        </div>`
+                    },
+                    {
+                        title: t('tx2_title'),
+                        subtitle: t('tx2_sub'),
+                        type: t('tx2_type'),
+                        desc: t('tx2_desc'),
+                        date: t('tx2_date'),
+                        icon: 'menu_book',
+                        content: `<div class="font-body text-sm leading-relaxed space-y-4">
+                            <p class="text-on-surface-variant dark:text-slate-300">
+                                The Pseudo-Dionysian corpus, comprising works such as <em>Celestial Hierarchy</em>, <em>Ecclesiastical Hierarchy</em>, <em>Divine Names</em>, and <em>Mystical Theology</em>, represents one of the most influential theological syntheses of late antiquity.
+                            </p>
+                            <div class="bg-surface-container dark:bg-slate-800 p-4 mt-4">
+                                <h4 class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2">Key Themes</h4>
+                                <ul class="text-on-surface-variant dark:text-slate-400 text-xs space-y-1 list-disc list-inside">
+                                    <li>Apophatic theology and the unknowability of God</li>
+                                    <li>Hierarchical mediation between divine and created</li>
+                                    <li>Liturgical symbolism and sacramental theology</li>
+                                    <li>Neoplatonic influence on Christian mysticism</li>
+                                </ul>
+                            </div>
+                        </div>`
+                    }
+                ]
+            }
+        },
+        {
+            id: 'lesson2',
+            titleKey: 'lesson_2_title',
+            descKey: 'lesson_2_desc',
+            color: '#1a2e44',
+            accent: '#b4c8e4',
+            media: {
+                audio: [
+                    {
+                        title: t('m2_title'),
+                        subtitle: t('m2_sub'),
+                        type: t('m2_type'),
+                        desc: t('m2_desc'),
+                        date: t('m2_date'),
+                        icon: 'mic',
+                        audioUrl: '#',
+                        isNLM: false
+                    }
+                ],
+                slides: [],
+                pdf: [
+                    {
+                        title: t('d3_title'),
+                        subtitle: t('d3_sub'),
+                        type: t('d3_type'),
+                        desc: t('d3_desc'),
+                        date: t('d3_date'),
+                        icon: 'description',
+                        pdfUrl: 'https://auth.academia.edu/download/placeholder3.pdf',
+                        viewerUrl: 'https://docs.google.com/viewer?url=https://auth.academia.edu/download/placeholder3.pdf&embedded=true'
+                    }
+                ],
+                text: []
+            }
+        },
+        {
+            id: 'lesson3',
+            titleKey: 'lesson_3_title',
+            descKey: 'lesson_3_desc',
+            color: '#2d4a1e',
+            accent: '#a3c585',
+            media: {
+                audio: [],
+                slides: [
+                    {
+                        title: t('s1_title'),
+                        subtitle: t('s1_sub'),
+                        type: t('s1_type'),
+                        desc: t('s1_desc'),
+                        date: t('s1_date'),
+                        icon: 'slideshow',
+                        embedUrl: 'https://docs.google.com/presentation/d/placeholder/embed?start=false&loop=false&delayms=3000',
+                        directUrl: '#'
+                    }
+                ],
+                pdf: [
+                    {
+                        title: t('d1_title'),
+                        subtitle: t('d1_sub'),
+                        type: t('d1_type'),
+                        desc: t('d1_desc'),
+                        date: t('d1_date'),
+                        icon: 'description',
+                        pdfUrl: 'https://auth.academia.edu/download/placeholder1.pdf',
+                        viewerUrl: 'https://docs.google.com/viewer?url=https://auth.academia.edu/download/placeholder1.pdf&embedded=true'
+                    }
+                ],
+                text: []
+            }
+        },
+        {
+            id: 'lesson4',
+            titleKey: 'lesson_4_title',
+            descKey: 'lesson_4_desc',
+            color: '#775a19',
+            accent: '#fed488',
+            media: {
+                audio: [],
+                slides: [
+                    {
+                        title: t('s2_title'),
+                        subtitle: t('s2_sub'),
+                        type: t('s2_type'),
+                        desc: t('s2_desc'),
+                        date: t('s2_date'),
+                        icon: 'slideshow',
+                        embedUrl: 'https://docs.google.com/presentation/d/placeholder2/embed?start=false&loop=false&delayms=3000',
+                        directUrl: '#'
+                    }
+                ],
+                pdf: [],
+                text: []
+            }
+        }
+    ];
+
+    if (!window.lessonStates) {
+        window.lessonStates = {};
+        lessons.forEach(l => {
+            window.lessonStates[l.id] = { expanded: false, activeTab: 'audio' };
+        });
+        window.lessonStates['lesson1'].expanded = true;
+    }
+
+    function renderLessonMedia(lesson, tab) {
+        const items = lesson.media[tab] || [];
+        if (items.length === 0) {
+            return `<div class="p-8 text-center">
+                <span class="material-symbols-outlined text-4xl text-on-surface-variant/30 mb-3">folder_off</span>
+                <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant/50">No ${tab} content for this lesson</p>
+            </div>`;
+        }
+
+        return `<div class="lesson-media-grid p-6">
+            ${items.map(item => {
+                if (tab === 'audio') {
+                    if (item.isNLM && item.nlmUrl) {
+                        return `<div class="media-card bg-surface-container-low dark:bg-slate-800 overflow-hidden border border-outline-variant/20 dark:border-slate-700">
+                            <div class="relative h-40 overflow-hidden bg-[#03192e] flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-amber-200 opacity-40">headphones</span>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                    <span class="media-type-badge bg-[#03192e] text-amber-200">
+                                        <span class="material-symbols-outlined text-[10px]">smart_toy</span>
+                                        NotebookLM AI
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">${item.date}</span>
+                                </div>
+                                <h3 class="font-headline text-xl italic text-primary dark:text-slate-100 mb-2">${item.title}</h3>
+                                <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-3">${item.subtitle}</p>
+                                <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed mb-5">${item.desc}</p>
+
+                                <div class="nlm-embed p-4 mb-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="material-symbols-outlined text-2xl text-secondary">podcasts</span>
+                                        <div>
+                                            <p class="font-label text-xs uppercase tracking-widest text-primary dark:text-slate-100">AI Audio Overview</p>
+                                            <p class="font-label text-[9px] text-on-surface-variant/60">${t('nlm_desc')}</p>
+                                        </div>
+                                    </div>
+                                    <div class="audio-waveform mb-3"></div>
+                                    <a href="${item.nlmUrl}" target="_blank" class="flex items-center justify-center gap-2 bg-primary text-on-primary py-3 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-colors w-full">
+                                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                        ${t('nlm_open')}
+                                    </a>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <button onclick="showModal('${item.title.replace(/'/g, "\'")}', '<p class=\'font-body text-sm text-on-surface-variant dark:text-slate-300\'>${item.desc.replace(/'/g, "\'")}</p><div class=\'mt-4 p-3 bg-surface-container dark:bg-slate-700\'><p class=\'font-label text-[9px] uppercase tracking-widest text-secondary\'>Source Notes</p><p class=\'text-xs text-on-surface-variant mt-1\'>Primary: Acts 17:16–34. Secondary: Chrysostom Homilies, Theodoret Ecclesiastical History.</p></div>')" class="flex-1 border border-primary/30 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>`;
+                    } else {
+                        return `<div class="media-card bg-surface-container-low dark:bg-slate-800 overflow-hidden border border-outline-variant/20 dark:border-slate-700">
+                            <div class="relative h-40 overflow-hidden bg-[#1a2e44] flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-blue-200 opacity-40">${item.icon}</span>
+                                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                    <span class="media-type-badge bg-[#1a2e44] text-blue-200">
+                                        <span class="material-symbols-outlined text-[10px]">${item.icon}</span>
+                                        ${item.type}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">${item.date}</span>
+                                </div>
+                                <h3 class="font-headline text-xl italic text-primary dark:text-slate-100 mb-2">${item.title}</h3>
+                                <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-3">${item.subtitle}</p>
+                                <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed mb-5">${item.desc}</p>
+                                <div class="bg-surface-container dark:bg-slate-900 p-4 mb-4 border border-outline-variant/20 dark:border-slate-700">
+                                    <audio controls class="w-full" style="height:40px;">
+                                        <source src="${item.audioUrl}" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button onclick="showModal('${item.title.replace(/'/g, "\'")}', '<p class=\'font-body text-sm text-on-surface-variant dark:text-slate-300\'>${item.desc.replace(/'/g, "\'")}</p>')" class="flex-1 border border-primary/30 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+                                        Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>`;
+                    }
+                }
+
+                if (tab === 'slides') {
+                    return `<div class="media-card bg-surface-container-low dark:bg-slate-800 overflow-hidden border border-outline-variant/20 dark:border-slate-700">
+                        <div class="relative h-48 overflow-hidden bg-[#2d4a1e] flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-green-200 opacity-40">${item.icon}</span>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                <span class="media-type-badge bg-[#2d4a1e] text-green-200">
+                                    <span class="material-symbols-outlined text-[10px]">${item.icon}</span>
+                                    ${item.type}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">${item.date}</span>
+                            </div>
+                            <h3 class="font-headline text-xl italic text-primary dark:text-slate-100 mb-2">${item.title}</h3>
+                            <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-3">${item.subtitle}</p>
+                            <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed mb-5">${item.desc}</p>
+                            <div class="pdf-embed-container mb-4 relative" style="height:200px;">
+                                <iframe src="${item.embedUrl}" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="${item.directUrl}" target="_blank" class="flex-1 text-center bg-primary text-on-primary py-2 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    ${t('view_slides')}
+                                </a>
+                                <button onclick="showModal('${item.title.replace(/'/g, "\'")}', '<p class=\'font-body text-sm text-on-surface-variant dark:text-slate-300\'>${item.desc.replace(/'/g, "\'")}</p>')" class="flex-1 border border-primary/30 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+
+                if (tab === 'pdf') {
+                    return `<div class="media-card bg-surface-container-low dark:bg-slate-800 overflow-hidden border border-outline-variant/20 dark:border-slate-700">
+                        <div class="relative h-48 overflow-hidden bg-[#352b22] flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-amber-200 opacity-40">${item.icon}</span>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                <span class="media-type-badge bg-[#352b22] text-amber-200">
+                                    <span class="material-symbols-outlined text-[10px]">${item.icon}</span>
+                                    ${item.type}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">${item.date}</span>
+                            </div>
+                            <h3 class="font-headline text-xl italic text-primary dark:text-slate-100 mb-2">${item.title}</h3>
+                            <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-3">${item.subtitle}</p>
+                            <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed mb-5">${item.desc}</p>
+                            <div class="pdf-embed-container mb-4 relative" style="height:280px;">
+                                <iframe src="${item.viewerUrl}" frameborder="0" width="100%" height="100%"></iframe>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="${item.pdfUrl}" target="_blank" class="flex-1 text-center bg-primary text-on-primary py-2 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    ${t('view_pdf')}
+                                </a>
+                                <a href="${item.pdfUrl}" download class="flex-1 text-center border border-primary/30 py-2 font-label text-xs uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+                                    ${t('download')}
+                                </a>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+
+                if (tab === 'text') {
+                    return `<div class="media-card bg-surface-container-low dark:bg-slate-800 overflow-hidden border border-outline-variant/20 dark:border-slate-700">
+                        <div class="relative h-48 overflow-hidden bg-[#775a19] flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-yellow-100 opacity-40">${item.icon}</span>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                                <span class="media-type-badge bg-[#775a19] text-yellow-100">
+                                    <span class="material-symbols-outlined text-[10px]">${item.icon}</span>
+                                    ${item.type}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">${item.date}</span>
+                            </div>
+                            <h3 class="font-headline text-xl italic text-primary dark:text-slate-100 mb-2">${item.title}</h3>
+                            <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-3">${item.subtitle}</p>
+                            <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed mb-5">${item.desc}</p>
+                            <div class="bg-surface-container dark:bg-slate-900 p-4 mb-4 border border-outline-variant/20 dark:border-slate-700 max-h-64 overflow-y-auto">
+                                ${item.content}
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="showModal('${item.title.replace(/'/g, "\'")}', '${item.content.replace(/'/g, "\'")}')" class="flex-1 bg-primary text-on-primary py-2 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    ${t('read')}
+                                </button>
+                                <button onclick="showModal('${item.title.replace(/'/g, "\'")}', '<p class=\'font-body text-sm text-on-surface-variant dark:text-slate-300\'>${item.desc.replace(/'/g, "\'")}</p>')" class="flex-1 border border-primary/30 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-surface-dim transition-colors text-primary dark:text-slate-300">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+                return '';
+            }).join('')}
+        </div>`;
+    }
+
+    function renderLessonTabs(lesson) {
+        const state = window.lessonStates[lesson.id];
+        const tabs = [
+            { id: 'audio', label: t('lesson_audio'), icon: 'headphones', count: lesson.media.audio.length },
+            { id: 'slides', label: t('lesson_slides'), icon: 'slideshow', count: lesson.media.slides.length },
+            { id: 'pdf', label: t('lesson_pdf'), icon: 'description', count: lesson.media.pdf.length },
+            { id: 'text', label: t('lesson_text'), icon: 'article', count: lesson.media.text.length }
+        ].filter(t => t.count > 0);
+
+        if (tabs.length === 0) return '';
+
+        if (!tabs.find(t => t.id === state.activeTab)) {
+            state.activeTab = tabs[0].id;
+        }
+
+        return `<div class="flex gap-1 mb-4 border-b border-outline-variant/20 pb-1">
+            ${tabs.map(tab => `
+                <button onclick="switchLessonTab('${lesson.id}', '${tab.id}')" 
+                    class="lesson-tab-btn ${tab.id === state.activeTab ? 'active' : 'text-on-surface-variant/60 dark:text-slate-400'} px-4 py-2 font-label text-xs uppercase tracking-widest flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">${tab.icon}</span>
+                    ${tab.label}
+                    <span class="text-[10px] opacity-60">(${tab.count})</span>
+                </button>
+            `).join('')}
+        </div>
+        ${renderLessonMedia(lesson, state.activeTab)}`;
+    }
+
+    return `<div class="max-w-6xl mx-auto">
+    <h1 class="font-headline text-5xl italic text-primary dark:text-slate-100 border-l-8 border-secondary pl-6 mb-6">${t('media_title')}</h1>
+    <p class="font-body text-base text-on-surface-variant dark:text-slate-400 mb-10 max-w-3xl leading-relaxed">${t('media_sub')}</p>
+
+    <div class="space-y-6">
+        ${lessons.map(lesson => {
+            const state = window.lessonStates[lesson.id];
+            const isExpanded = state.expanded;
+            const hasContent = lesson.media.audio.length + lesson.media.slides.length + lesson.media.pdf.length + lesson.media.text.length;
+
+            return `<div class="lesson-folder bg-surface-container-low dark:bg-slate-800" id="folder-${lesson.id}">
+                <div class="lesson-header flex items-center justify-between p-6 ${isExpanded ? 'border-b border-outline-variant/20 dark:border-slate-700' : ''}" onclick="toggleLesson('${lesson.id}')">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 flex items-center justify-center" style="background:${lesson.color}">
+                            <span class="material-symbols-outlined text-2xl" style="color:${lesson.accent}">folder</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-xl italic text-primary dark:text-slate-100">${t(lesson.titleKey)}</h3>
+                            <p class="font-body text-sm text-on-surface-variant dark:text-slate-400 mt-1 max-w-2xl">${t(lesson.descKey)}</p>
+                            <div class="flex gap-3 mt-2">
+                                ${lesson.media.audio.length ? `<span class="font-label text-[9px] uppercase tracking-widest text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">headphones</span>${lesson.media.audio.length} Audio</span>` : ''}
+                                ${lesson.media.slides.length ? `<span class="font-label text-[9px] uppercase tracking-widest text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">slideshow</span>${lesson.media.slides.length} Slides</span>` : ''}
+                                ${lesson.media.pdf.length ? `<span class="font-label text-[9px] uppercase tracking-widest text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">description</span>${lesson.media.pdf.length} PDF</span>` : ''}
+                                ${lesson.media.text.length ? `<span class="font-label text-[9px] uppercase tracking-widest text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">article</span>${lesson.media.text.length} Text</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/40">${hasContent} items</span>
+                        <span class="material-symbols-outlined text-primary dark:text-slate-300 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}">expand_more</span>
+                    </div>
+                </div>
+                <div class="lesson-content ${isExpanded ? 'open' : ''}" id="content-${lesson.id}">
+                    ${renderLessonTabs(lesson)}
+                </div>
+            </div>`;
+        }).join('')}
+    </div>
+    </div>`;
+}
+
+// ── LESSON FOLDER FUNCTIONS ────────────────────────────
+function toggleLesson(lessonId) {
+    if (!window.lessonStates) return;
+    window.lessonStates[lessonId].expanded = !window.lessonStates[lessonId].expanded;
+    renderView('media');
+}
+
+function switchLessonTab(lessonId, tabId) {
+    if (!window.lessonStates) return;
+    window.lessonStates[lessonId].activeTab = tabId;
+    renderView('media');
 }
 
 // ── RENDER & NAV ──────────────────────────────────────
@@ -583,6 +1254,7 @@ function renderView(view){
     if(view==='about') mainContainer.innerHTML = aboutTemplate();
     else if(view==='academic') mainContainer.innerHTML = academicTemplate();
     else if(view==='educational') mainContainer.innerHTML = educationalTemplate();
+    else if(view==='media') mainContainer.innerHTML = mediaTemplate();
     setActiveNav(view);
     currentView=view;
     attachEvents();
