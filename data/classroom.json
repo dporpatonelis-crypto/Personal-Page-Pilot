@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
-  "release_id": "36443fe23dec4dc8a5fe9a1c30aefcd9",
+  "release_id": "695f7e0f2d784061b6d887ce3a9a8a70",
   "grades": [
     "Α΄ Γυμνασίου",
-    "Β΄ Γυμνασίου"
+    "Β΄ Γυμνασίου",
+    "Β΄ Λυκείου"
   ],
   "documents": [
     {
@@ -1857,6 +1858,611 @@
       }
     },
     {
+      "id": "2760101a-8025-4e8d-9a8f-c4ad04b5a930",
+      "document_id": "052dfc79-c11c-5c40-87ed-e906755d126a",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Η φανέρωση του Θεού",
+        "grade": "Β΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "992838af-ca32-4e17-9333-7f0ca61f2d3c",
+                "label": "Αναζήτηση της αιώνιας αλήθειας.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed"
+              },
+              {
+                "id": "248cc0e7-c6a8-46f9-8a68-6d9233a514f2",
+                "label": "Η Μεταμόρφωση του Χριστού στο Θαβώρ.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d"
+              },
+              {
+                "id": "03662b85-1bef-4660-8e1e-b2384374f0e6",
+                "label": "Η αποκάλυψη κατεβαίνει στον άνθρωπο.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372"
+              },
+              {
+                "id": "0e14b3a0-c64d-4e02-9917-7735f87524e0",
+                "label": "Root of revelation_ the luminous true vine.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe"
+              },
+              {
+                "id": "e75abfe5-2166-4abc-8d9a-7614b750601a",
+                "label": "Προσκυνητής στον Χρυσό Λαβύρινθο.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "9bc5cf71-977e-5599-9314-541bc16726e5",
+                "label": "Οι έξι ανακαλύψεις · Interactive Sculpture",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Interactive-sculpture/?scenario=slides-discovery"
+              },
+              {
+                "id": "3f970637-1a9a-5fcf-9e2a-c8971f4cd7d4",
+                "label": "Οντολογικός χάρτης της Αποκάλυψης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5e73342a-871d-49f4-affd-8c7d8817f6d4",
+      "document_id": "eae57ab3-3f0e-5af5-aac1-8852d2985678",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Δημιουργία, κατ’ εικόνα και νέα ζωή",
+        "grade": "Β΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "8ae47ac7-756b-4bb6-9ffe-bdc27a4a40b0",
+                "label": "Genesis symbols of the Fall.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e"
+              },
+              {
+                "id": "c60bb876-984c-4da3-8cb7-dbe15cf1b7b4",
+                "label": "Ιερή Υφαντουργία της Δημιουργίας.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1"
+              },
+              {
+                "id": "993b073c-797a-4a80-9668-df9acaea4efb",
+                "label": "Η Πτώση του Ανθρώπου_ Εικονογραφημένος Χάρτης.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "993b2550-c342-5f25-a4c4-61363bea40a0",
+                "label": "Δημιουργία · Αναλόγιο εννοιών",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/apps/animated-concept-canvas/creation-concepts.html"
+              },
+              {
+                "id": "be0734ef-1008-56a0-8a8f-15dc8e087152",
+                "label": "Ο άνθρωπος: δώρο και κλήση",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "18982e3a-39a6-4759-906a-62bfcb644834",
+      "document_id": "e800dcb4-9a6b-5c8d-8032-78b13ea330d7",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Αγία Τριάδα και βίωμα",
+        "grade": "Β΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.32980607452167976,
+              "y": -0.014169026204353369,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "3a34525c-2d76-4560-b508-1c278742c7ec",
+                "label": "Η Μεταμόρφωση του Χριστού στο Θαβώρ.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d"
+              },
+              {
+                "id": "1b2dd08d-12e9-417e-94e8-690dd323fb8d",
+                "label": "Η Αγία Τριάδα σε Βυζαντινό Εικόνισμα.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.04339773456039636,
+              "y": 0.27092793880837357,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "35854422-b882-5fcb-9c9a-c22d96eeafa1",
+                "label": "Αγία Τριάδα · Αναλόγιο εμβάθυνσης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/trinitarian-doctrine-economic.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.5000491929356603,
+              "y": 0.699363028983947,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4df0611e-d5b8-4e07-93fb-82645f04cc92",
+      "document_id": "93badde4-b1d4-5dbc-a734-b6c87275c4fd",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Θάνατος, Ανάσταση και Μέλλουσα Κρίση",
+        "grade": "Β΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "99bb24df-eddd-4ec1-bf49-2b1debe31622",
+                "label": "Φωτεινός Σταυρός Πέρα από τις Σπασμένες Πύλες.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d"
+              },
+              {
+                "id": "ac0d85b2-9c15-42c5-a2c4-4384c4776c4f",
+                "label": "Δύο Ψυχές Κάτω από το Θείο Φως.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "1d4a373e-3aaf-592b-af02-d25bb971fbe8",
+                "label": "Μέλλουσα Κρίση · αγάπη, φως και ελευθερία",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fc582997-d7bf-4a3a-b960-b4de6378b0e7",
+      "document_id": "155b6f34-130d-50d6-95b6-0c49296b76a2",
+      "kind": "workspace",
+      "document": {
+        "schema_version": 1,
+        "title": "Χριστιανισμός",
+        "grade": "Β΄ Λυκείου",
+        "visual_theme": "planets",
+        "verbs": [],
+        "lessons": [
+          {
+            "id": "50eba165-c0af-5b5b-a964-f7588af71ce9",
+            "theme_id": "991ea867-5286-55b5-a952-a1d9d3c0578c",
+            "title": "Η φανέρωση του Θεού",
+            "canvas_id": "052dfc79-c11c-5c40-87ed-e906755d126a"
+          },
+          {
+            "id": "8d075b8f-3798-5ad8-bb04-e350a141847e",
+            "theme_id": "d30e055a-7b96-51c2-9cf0-c7b1765f76b1",
+            "title": "Δημιουργία, κατ’ εικόνα και νέα ζωή",
+            "canvas_id": "eae57ab3-3f0e-5af5-aac1-8852d2985678"
+          },
+          {
+            "id": "3bb1598a-90b3-5fb2-9aa2-5ff2f4e208cb",
+            "theme_id": "006800c4-c14a-596b-a46c-6d533d162ec7",
+            "title": "Αγία Τριάδα και βίωμα",
+            "canvas_id": "e800dcb4-9a6b-5c8d-8032-78b13ea330d7"
+          },
+          {
+            "id": "96a54f4d-bd55-53f6-9e51-395a7a0c4054",
+            "theme_id": "0c2fd8fe-7c00-5f83-9831-426a2f4b3962",
+            "title": "Θάνατος, Ανάσταση και Μέλλουσα Κρίση",
+            "canvas_id": "93badde4-b1d4-5dbc-a734-b6c87275c4fd"
+          }
+        ],
+        "themes": [
+          {
+            "id": "991ea867-5286-55b5-a952-a1d9d3c0578c",
+            "title": "Αναζήτηση και Αποκάλυψη",
+            "icon": "✦",
+            "box": {
+              "x": 0.135,
+              "y": 0.012,
+              "w": 0.33,
+              "h": 0.475
+            },
+            "artwork": "search"
+          },
+          {
+            "id": "d30e055a-7b96-51c2-9cf0-c7b1765f76b1",
+            "title": "Δημιουργία",
+            "icon": "❋",
+            "box": {
+              "x": 0.535,
+              "y": 0.012,
+              "w": 0.33,
+              "h": 0.475
+            },
+            "artwork": "creation"
+          },
+          {
+            "id": "006800c4-c14a-596b-a46c-6d533d162ec7",
+            "title": "Τριαδικό δόγμα και βίωμα",
+            "icon": "✧",
+            "box": {
+              "x": 0.135,
+              "y": 0.507,
+              "w": 0.33,
+              "h": 0.475
+            },
+            "artwork": "trinity"
+          },
+          {
+            "id": "0c2fd8fe-7c00-5f83-9831-426a2f4b3962",
+            "title": "Θάνατος και Κρίση",
+            "icon": "☼",
+            "box": {
+              "x": 0.535,
+              "y": 0.507,
+              "w": 0.33,
+              "h": 0.475
+            },
+            "artwork": "judgement"
+          }
+        ],
+        "connections": []
+      }
+    },
+    {
       "id": "2af2adf8-a2e7-42bf-b119-f5b66d248879",
       "document_id": "266df61a-f1b4-5599-b367-7e3adedf1455",
       "kind": "canvas",
@@ -3125,6 +3731,54 @@
     "46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca": {
       "path": "media/46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca.png",
       "mime": "image/png"
+    },
+    "97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed": {
+      "path": "media/97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed.png",
+      "mime": "image/png"
+    },
+    "50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d": {
+      "path": "media/50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d.png",
+      "mime": "image/png"
+    },
+    "c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372": {
+      "path": "media/c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372.png",
+      "mime": "image/png"
+    },
+    "3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe": {
+      "path": "media/3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe.png",
+      "mime": "image/png"
+    },
+    "120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff": {
+      "path": "media/120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff.png",
+      "mime": "image/png"
+    },
+    "83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e": {
+      "path": "media/83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e.png",
+      "mime": "image/png"
+    },
+    "8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1": {
+      "path": "media/8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1.png",
+      "mime": "image/png"
+    },
+    "a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b": {
+      "path": "media/a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b.png",
+      "mime": "image/png"
+    },
+    "967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7": {
+      "path": "media/967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7.png",
+      "mime": "image/png"
+    },
+    "48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d": {
+      "path": "media/48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d.png",
+      "mime": "image/png"
+    },
+    "e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683": {
+      "path": "media/e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683.png",
+      "mime": "image/png"
+    },
+    "569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2": {
+      "path": "media/569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2.html",
+      "mime": "text/html"
     }
   },
   "today": null
