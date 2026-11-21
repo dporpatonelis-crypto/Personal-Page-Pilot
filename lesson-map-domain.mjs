@@ -9,7 +9,39 @@ export const LM_VERBS = ['προεικονίζει','φανερώνει','ερμ
 export const LM_WORKSPACE_ID = 'd15602cc-a42b-4c76-9577-0535b43cfa01';
 export const LM_PILOT_ID = 'd15602cc-a42b-4c76-9577-0535b43cfa02';
 export const LM_PILOT_SCENARIO = 'html:1jiGpW-SNz_pIEP_fOdUyyOlqKu315LxD:eikona-talanta-loukas';
-export const LM_MAP_THEMES = ['default', 'jerusalem', 'mediterranean', 'planets', 'byzantium'];
+export const LM_ISLAND_ARTWORK = Object.freeze({
+  'world-religions': Object.freeze({
+    'north-america': 'Βόρεια Αμερική',
+    'south-america': 'Νότια Αμερική',
+    eurasia: 'Ευρασία',
+    africa: 'Αφρική',
+    oceania: 'Ωκεανία',
+  }),
+  'modern-orthodox': Object.freeze({
+    'parish-church': 'Ναός',
+    'parish-courtyard': 'Προαύλιο',
+    'parish-hall': 'Ενοριακή αίθουσα',
+    'parish-chapel': 'Παρεκκλήσι',
+    'parish-garden': 'Κήπος της ενορίας',
+  }),
+  'modern-city': Object.freeze({
+    'civic-square': 'Πλατεία',
+    'city-homes': 'Γειτονιά',
+    'urban-transit': 'Συγκοινωνίες',
+    'city-park': 'Πάρκο',
+    'city-workplaces': 'Χώροι εργασίας',
+  }),
+});
+export const LM_ISLAND_THEMES = Object.freeze(Object.keys(LM_ISLAND_ARTWORK));
+export const LM_MAP_THEMES = ['default', 'jerusalem', 'mediterranean', 'planets', 'byzantium', ...LM_ISLAND_THEMES];
+const legacyIslandArtwork = LM_BUILDINGS.map(({sprite}) => sprite);
+export function lmIslandArtwork(visualTheme, value) {
+  const options = LM_ISLAND_ARTWORK[visualTheme];
+  if (!options) return '';
+  if (Object.hasOwn(options, value)) return value;
+  // The first versions of these maps used the five lesson building keys as island artwork.
+  return Object.keys(options)[Math.max(0, legacyIslandArtwork.indexOf(value))];
+}
 export const LM_PLANET_ARTWORK = Object.freeze({
   search: 'Αναζήτηση και Αποκάλυψη',
   creation: 'Δημιουργία',
@@ -24,6 +56,10 @@ export const LM_BYZANTIUM_ARTWORK = Object.freeze({
   'modern-fathers': 'Νεότερο εργαστήριο αγιογραφίας',
 });
 export const lmByzantiumArtwork = value => typeof value === 'string' && Object.hasOwn(LM_BYZANTIUM_ARTWORK, value) ? value : '';
+export const lmKnownThemeArtwork = value => typeof value === 'string' && Boolean(
+  lmPlanetArtwork(value) || lmByzantiumArtwork(value) || legacyIslandArtwork.includes(value)
+  || Object.values(LM_ISLAND_ARTWORK).some(options => Object.hasOwn(options, value))
+);
 export const lmId = () => crypto.randomUUID?.() ?? '10000000-1000-4000-8000-100000000000'.replace(/[018]/g,c=>(Number(c)^crypto.getRandomValues(new Uint8Array(1))[0]&15>>Number(c)/4).toString(16));
 export const lmClone = value => JSON.parse(JSON.stringify(value));
 export const lmEscape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -115,7 +151,9 @@ export function lmVisibleWorkspace(workspace,documents,registry) {
     if(l.canvas_id)return lmCanvasReady(documents.get(l.canvas_id)?.document,registry);
     return registry.scenarios.find(s=>s.scenario_id===l.scenario_id)?.activities.some(a=>['html','image','pdf','quiz'].includes(a.kind)&&(a.url||a.download_url));
   });
-  const themes=workspace.themes.filter(t=>lessons.some(l=>l.theme_id===t.id));
+  const themes=LM_ISLAND_THEMES.includes(workspace.visual_theme)
+    ? workspace.themes
+    : workspace.themes.filter(t=>lessons.some(l=>l.theme_id===t.id));
   return {...workspace,themes,lessons:lessons.map(l=>({...l,title:documents.get(l.canvas_id)?.document.title||l.title}))};
 }
 export function lmMaterialKey(m) {
@@ -181,7 +219,7 @@ export function lmValidateTransfer(value) {
     if(c.visual_theme&&!LM_MAP_THEMES.includes(c.visual_theme)||c.title&&typeof c.title!=='string'||c.grade&&typeof c.grade!=='string')throw Error('Μη έγκυρα στοιχεία χάρτη.');
     for(const t of c.themes){
       if(!uuid.test(t.id)||themes.has(t.id)||typeof t.title!=='string'||!t.title.trim()||t.title.length>240||typeof t.icon!=='string'||t.icon.length>20||!t.box||!['x','y','w','h'].every(k=>Number.isFinite(t.box[k]))||Math.abs(t.box.x)>5||Math.abs(t.box.y)>5||t.box.w<.05||t.box.h<.05||t.box.w>2||t.box.h>2)throw Error('Μη έγκυρη θεματική της κατανομής.');
-      if('artwork' in t&&!lmPlanetArtwork(t.artwork)&&!lmByzantiumArtwork(t.artwork)){
+      if('artwork' in t&&!lmKnownThemeArtwork(t.artwork)){
         throw Error(c.visual_theme==='planets'?'Άγνωστη εικόνα πλανήτη.':'Άγνωστη εικονογράφηση θεματικής.');
       }
       if(invalidPeriod(t))throw Error('Μη έγκυρη χρονική περίοδος.');

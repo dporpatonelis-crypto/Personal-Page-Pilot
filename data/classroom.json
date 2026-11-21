@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "release_id": "695f7e0f2d784061b6d887ce3a9a8a70",
+  "release_id": "d373c31d81d0451fae0429cefda845f6",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
-    "Β΄ Λυκείου"
+    "Γ΄ Γυμνασίου",
+    "Α΄ Λυκείου",
+    "Β΄ Λυκείου",
+    "Γ΄ Λυκείου"
   ],
   "documents": [
     {
@@ -3629,6 +3632,451 @@
             },
             "artwork": "modern-fathers",
             "period": "Από τον 20ό αι."
+          }
+        ],
+        "connections": []
+      }
+    },
+    {
+      "id": "a792f21b-4bfe-4e6d-ae7f-e369ec671e99",
+      "document_id": "296318c4-1ee2-4f81-876b-399211317944",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Θρησκείες του κόσμου · Πέντε διαδρομές μελέτης",
+        "grade": "Γ΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "354d1cce-5553-4009-ab2f-683c81f7b3d8",
+                "label": "HTML · Θρησκείες του κόσμου · Πέντε διαδρομές μελέτης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/world-religions-paths.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "7aeb9e29-eb5d-4c7a-b1df-561319c24694",
+      "document_id": "39fe91fc-6850-5da1-9fb8-38b538c832e1",
+      "kind": "workspace",
+      "document": {
+        "schema_version": 1,
+        "title": "Θρησκείες του κόσμου",
+        "grade": "Γ΄ Γυμνασίου",
+        "visual_theme": "world-religions",
+        "verbs": [],
+        "lessons": [
+          {
+            "id": "b6cd7c82-f3bf-4abd-b129-357467f2c870",
+            "theme_id": "0a3eb22f-de28-5bf2-bda8-95e2270e6e4a",
+            "title": "Θρησκείες του κόσμου · Πέντε διαδρομές μελέτης",
+            "canvas_id": "296318c4-1ee2-4f81-876b-399211317944"
+          }
+        ],
+        "themes": [
+          {
+            "id": "0a3eb22f-de28-5bf2-bda8-95e2270e6e4a",
+            "title": "Θρησκείες του Κόσμου",
+            "icon": "",
+            "box": {
+              "x": 0.035,
+              "y": 0.045,
+              "w": 0.305,
+              "h": 0.385
+            },
+            "artwork": "north-america"
+          }
+        ],
+        "connections": []
+      }
+    },
+    {
+      "id": "e183f8fa-52d5-4f26-b657-2b2956a332b8",
+      "document_id": "dedb0402-0306-4a09-81ac-2e479d4ec99f",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Επιστήμη και θρησκεία",
+        "grade": "Γ΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "f4622238-da2b-4fa9-9a74-45bf176d82de",
+                "label": "HTML · Επιστήμη και θρησκεία",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/science-heart-mindmap.html"
+              },
+              {
+                "id": "84c7f405-8307-4705-9c07-ee740697f494",
+                "label": "HTML · Ο άνθρωπος και οι δύο τρόποι γνώσης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "f8156c5e-3e72-4f6b-bf0a-caaba5413313",
+      "document_id": "7fb6f367-428c-5274-9a07-a07c72b90d55",
+      "kind": "workspace",
+      "document": {
+        "schema_version": 1,
+        "title": "Χριστιανισμός και σύγχρονος κόσμος",
+        "grade": "Γ΄ Λυκείου",
+        "visual_theme": "modern-city",
+        "verbs": [],
+        "lessons": [
+          {
+            "id": "398ef4c0-0da3-4cff-ab7c-76a357a4134d",
+            "theme_id": "39e4ed5d-bb98-51bb-b3ca-0f2d6f2e3e1a",
+            "title": "Επιστήμη και θρησκεία",
+            "canvas_id": "dedb0402-0306-4a09-81ac-2e479d4ec99f"
+          }
+        ],
+        "themes": [
+          {
+            "id": "39e4ed5d-bb98-51bb-b3ca-0f2d6f2e3e1a",
+            "title": "Επιστήμη και Θρησκεία",
+            "icon": "",
+            "box": {
+              "x": 0.67,
+              "y": 0.025,
+              "w": 0.305,
+              "h": 0.415
+            },
+            "artwork": "urban-transit"
+          }
+        ],
+        "connections": []
+      }
+    },
+    {
+      "id": "dedc6767-8751-4549-a6b4-15a68c80ab70",
+      "document_id": "9a64fb39-b55b-4822-bb72-ec3797d8e01b",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Το Σχέδιο της Θείας Οικονομίας",
+        "grade": "Α΄ Λυκείου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "6e4ef46a-4afd-4767-a956-cf8dbe2f63e5",
+                "label": "Πίνακας διερεύνησης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Browser-vr/apps/investigation/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2Ffd4661cc2c41d296e377.json"
+              },
+              {
+                "id": "3be90014-1389-438e-9642-390cf94dd7be",
+                "label": "Χρονολόγιο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Map-Timeline/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2Fd3c292609be3e9f43c2f.json"
+              },
+              {
+                "id": "7f08b8cd-9473-4674-b641-ba9a1b2c1392",
+                "label": "History Explorer",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://history-explorer-3d.vercel.app/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F45c97371b2daab1d20fc.json"
+              },
+              {
+                "id": "8d349c37-05ba-4ec3-9ecf-2d5c6a300b19",
+                "label": "Mind Palace",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/mind-palace-cases/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F08a59a989ac9094524bc.json"
+              },
+              {
+                "id": "1da8c3aa-f1b7-4df9-afeb-fad632893bcc",
+                "label": "HTML · Το Σχέδιο της Θείας Οικονομίας",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/theia-oikonomia-mindmap.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "37fa0cf9-580b-40b5-8ee9-1ca683f9d88d",
+      "document_id": "b9497ed2-0c49-54a6-bcf3-c3e10bb005b3",
+      "kind": "workspace",
+      "document": {
+        "schema_version": 1,
+        "title": "Ορθόδοξη πίστη και λατρεία",
+        "grade": "Α΄ Λυκείου",
+        "visual_theme": "modern-orthodox",
+        "verbs": [],
+        "lessons": [
+          {
+            "id": "c1d7ecf1-e904-456d-a8f1-be880e3175b5",
+            "theme_id": "1a2dd376-ab4e-52fb-99ac-6a79602b2a04",
+            "title": "Το Σχέδιο της Θείας Οικονομίας",
+            "canvas_id": "9a64fb39-b55b-4822-bb72-ec3797d8e01b"
+          }
+        ],
+        "themes": [
+          {
+            "id": "1a2dd376-ab4e-52fb-99ac-6a79602b2a04",
+            "title": "Θεία Οικονομία",
+            "icon": "",
+            "box": {
+              "x": 0.185,
+              "y": 0.515,
+              "w": 0.305,
+              "h": 0.415
+            },
+            "artwork": "parish-chapel"
           }
         ],
         "connections": []

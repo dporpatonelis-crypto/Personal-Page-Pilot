@@ -319,3 +319,105 @@
     white-space: normal;
   }
 }
+.lm-style-world-religions {
+  --lm-island-ink: #153b40;
+  --lm-island-accent: #1c655f;
+  --lm-island-line: #87aaa5;
+  --lm-island-surface: #f6f4e8;
+  --lm-island-ground: #b1d5cf;
+  --lm-island-grid: #245c6015;
+}
+
+.lm-style-modern-orthodox {
+  --lm-island-ink: #573223;
+  --lm-island-accent: #8a4a32;
+  --lm-island-line: #c29b80;
+  --lm-island-surface: #fff7e9;
+  --lm-island-ground: #dfcfac;
+  --lm-island-grid: #8f664f13;
+}
+
+.lm-style-modern-city {
+  --lm-island-ink: #19384a;
+  --lm-island-accent: #2d5e72;
+  --lm-island-line: #8fa9b7;
+  --lm-island-surface: #f2f7f8;
+  --lm-island-ground: #bfd0d7;
+  --lm-island-grid: #35597219;
+}
+
+.lm-illustrated-islands .lm-header {
+  background: linear-gradient(110deg, #fffefa, var(--lm-island-surface) 58%, var(--lm-island-ground));
+  border-bottom-color: var(--lm-island-line);
+}
+
+.lm-illustrated-islands.lm-archipelago .lm-viewport {
+  background-color: var(--lm-island-ground);
+  background-image: radial-gradient(ellipse at 50% 42%, #ffffff8c, transparent 72%),
+    linear-gradient(var(--lm-island-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lm-island-grid) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  box-shadow: inset 0 0 90px #18394c1c;
+}
+
+.lm-illustrated-islands.lm-city .lm-viewport {
+  background: radial-gradient(ellipse at 50% 44%, #fffef6, var(--lm-island-surface) 53%, var(--lm-island-ground));
+}
+
+.lm-illustrated-islands .lm-node .lm-sprite {
+  inset: 0;
+  height: 85%;
+  filter: drop-shadow(0 10px 9px #14272730);
+}
+
+.lm-illustrated-islands .lm-node .lm-node-content {
+  top: 81%;
+  bottom: auto;
+  left: 5%;
+  right: 5%;
+}
+
+.lm-illustrated-islands .lm-building .lm-sprite { height: 74%; }
+.lm-illustrated-islands .lm-building .lm-node-content { top: auto; bottom: 0; }
+.lm-illustrated-islands .lm-resize { bottom: 21%; right: 2%; }
+.lm-illustrated-islands .lm-canvas-caption { display: none; }
+
+.lesson-map.lm-illustrated-islands .lm-node-title {
+  display: block;
+  min-height: 0;
+  padding: 9px 16px;
+  border: 1px solid var(--lm-island-line);
+  border-radius: 12px;
+  background: var(--lm-island-surface);
+  color: var(--lm-island-ink);
+  box-shadow: 0 3px 8px #243b4926;
+  font-family: system-ui, sans-serif;
+  font-size: 29px;
+  font-weight: 720;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.lesson-map.lm-illustrated-islands .lm-node-title > span { font-size: .85em; }
+.lm-illustrated-islands .lm-node.lm-selected .lm-node-title { outline-color: var(--lm-island-accent); }
+.lm-illustrated-islands .lm-island-lessons { max-height: 92px; }
+.lesson-map.lm-illustrated-islands .lm-island-lessons > button,
+.lesson-map.lm-illustrated-islands .lm-building-open {
+  border-color: var(--lm-island-line);
+  color: var(--lm-island-ink);
+}
+
+.lm-illustrated-islands .lm-plaza {
+  background: radial-gradient(ellipse, var(--lm-island-surface) 24%, #fffef6dc 60%, transparent 73%);
+}
+
+@media (max-width: 900px) {
+  .lm-illustrated-islands.lm-class:has(.lm-header) .lm-viewport {
+    height: clamp(460px, calc(100dvh - 380px), 1000px);
+  }
+}
+
+@media (max-width: 700px) {
+  .lm-header .lm-context { display: flex; flex-flow: row wrap; }
+  .lm-header .lm-privacy { display: none; }
+}

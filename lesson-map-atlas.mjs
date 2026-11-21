@@ -6,7 +6,10 @@ export const LM_STYLES={
   jerusalem:{title:'Ιεροσόλυμα',folder:'jerusalem/'},
   mediterranean:{title:'Μεσόγειος',folder:'mediterranean/'},
   planets:{title:'Πλανήτες',folder:'planets/'},
-  byzantium:{title:'Βυζάντιο',folder:'byzantium/'}
+  byzantium:{title:'Βυζάντιο',folder:'byzantium/'},
+  'world-religions':{title:'Άτλαντας θρησκειών',folder:'world-religions/'},
+  'modern-orthodox':{title:'Σύγχρονη ορθόδοξη ενορία',folder:'modern-orthodox/'},
+  'modern-city':{title:'Σύγχρονη πόλη',folder:'modern-city/'}
 };
 export function lmRoute(workspaceId=LM_WORKSPACE_ID,canvasId='',versionId=''){
   const base=workspaceId===LM_WORKSPACE_ID?'#map':'#map/'+workspaceId;
