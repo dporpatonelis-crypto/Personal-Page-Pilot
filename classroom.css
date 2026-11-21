@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light;
+  font: 100%/1.45 system-ui, sans-serif;
+  color: #172e38;
+  background: #edf5f6;
+}
+[hidden] { display: none !important; }
+body { margin: 0; }
+.classroom-bar {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: end;
+  gap: 1rem 1.5rem;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background: #f8fcfd;
+  border-block-end: 1px solid #b8cbd2;
+  box-shadow: 0 2px 10px #22455316;
+  padding: .65rem clamp(.75rem, 2.5vw, 2rem);
+}
+.classroom-bar h1 {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  min-height: 3rem;
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+.classroom-bar nav {
+  display: grid;
+  grid-template-columns: minmax(9rem, .55fr) minmax(11rem, 1fr) auto auto;
+  gap: .5rem;
+  align-items: end;
+}
+.classroom-bar label {
+  display: grid;
+  min-width: 0;
+  gap: .12rem;
+  font-size: .9rem;
+  font-weight: 650;
+}
+.classroom-bar select, .classroom-bar button {
+  min-height: 3rem;
+  min-width: 3rem;
+  max-width: 100%;
+  padding: .48rem .75rem;
+  border: 1px solid #8caab5;
+  border-radius: .65rem;
+  background-color: #fff;
+  font: 600 1rem/1.35 system-ui, sans-serif;
+  color: inherit;
+}
+.classroom-bar select {
+  appearance: none;
+  padding-inline-end: 2.25rem;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='%23384f5a' stroke-width='2'%3E%3Cpath d='m4 7 5 5 5-5'/%3E%3C/svg%3E")
+    right .65rem center / 1rem no-repeat;
+}
+.classroom-bar button { background: #e1eef1; cursor: pointer; }
+.classroom-bar button:focus-visible, .classroom-bar select:focus-visible {
+  outline: 3px solid #265f82;
+  outline-offset: 2px;
+}
+#classroom-message:empty { display: none; }
+#classroom-message { background: #fff8df; padding: .6rem 1rem; }
+.classroom-empty {
+  max-width: 39rem;
+  margin: clamp(2rem, 12vh, 8rem) auto;
+  padding: 1.5rem;
+}
+.classroom-empty h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+.classroom-empty p { font-size: 1.06rem; }
+.lesson-map .lm-close {
+  min-height: 3rem;
+  min-width: 3rem;
+}
+.lesson-map .lm-close.classroom-close {
+  width: auto;
+  padding-inline: .9rem;
+}
+@media (max-width: 900px) {
+  .classroom-bar { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .classroom-bar { gap: .25rem; }
+  .classroom-bar h1 { min-height: 2rem; }
+  .classroom-bar h1 img { width: 28px; height: 28px; }
+  .classroom-bar nav { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+  .classroom-bar nav button { grid-row: 2; }
+}
