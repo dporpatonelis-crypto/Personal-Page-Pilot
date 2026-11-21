@@ -4,7 +4,7 @@ export function lmModal(host,title,body,{wide=false,onClose=()=>{}}={}) {
   const dialog=document.createElement('dialog');dialog.className='lm-dialog'+(wide?' lm-viewer':'');
   dialog.innerHTML=`<header><h2>${lmEscape(title)}</h2><button type="button" class="lm-close" aria-label="Κλείσιμο">✕</button></header><div class="lm-dialog-body">${body}</div>`;
   host.append(dialog);dialog.querySelector('.lm-close').onclick=()=>dialog.close();
-  dialog.addEventListener('close',()=>{onClose();dialog.remove();},{once:true});
+  dialog.addEventListener('close',()=>{try{onClose();}finally{dialog.remove();}},{once:true});
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
   dialog.showModal();return dialog;
 }
@@ -32,11 +32,19 @@ export function lmOpenHTMLPreview(host,label,url) {
 
 export async function lmShowViewer(owner,building,start=0) {
   const readOnly=Boolean(owner.readOnly||owner.historical);
-  let index=start,zoom=1,tool='pan',first=null,active=null,mediaEpoch=0,pdf=null,page=1,destroyed=false,renderTask=null;
+  let index=start,zoom=1,tool='pan',first=null,active=null,mediaEpoch=0,pdf=null,pdfTask=null,page=1,destroyed=false,renderTask=null;
   const viewerURLs=new Set();
   const releaseURLs=()=>{for(const url of viewerURLs){URL.revokeObjectURL(url);owner.objectURLs.delete(url);}viewerURLs.clear();};
+  function releasePDF() {
+    renderTask?.cancel();
+    renderTask=null;
+    pdf=null;
+    const task=pdfTask;
+    pdfTask=null;
+    if(task)void task.destroy().catch(()=>{});
+  }
   const container=owner.host;
-  const dialog=lmModal(container,building.title,`<div class="lm-viewer-controls"><button data-prev aria-label="Προηγούμενο υλικό">←</button><select data-material aria-label="Επιλογή υλικού"></select><button data-next aria-label="Επόμενο υλικό">→</button><button data-zoom-out aria-label="Σμίκρυνση">−</button><button data-zoom-in aria-label="Μεγέθυνση">＋</button><button data-fullscreen>Πλήρης οθόνη</button></div><div class="lm-viewer-status" role="status"></div><div class="lm-viewer-media"></div>`,{wide:true,onClose:()=>{destroyed=true;++mediaEpoch;renderTask?.cancel();pdf?.destroy();releaseURLs();owner.render();}});
+  const dialog=lmModal(container,building.title,`<div class="lm-viewer-controls"><button data-prev aria-label="Προηγούμενο υλικό">←</button><select data-material aria-label="Επιλογή υλικού"></select><button data-next aria-label="Επόμενο υλικό">→</button><button data-zoom-out aria-label="Σμίκρυνση">−</button><button data-zoom-in aria-label="Μεγέθυνση">＋</button><button data-fullscreen>Πλήρης οθόνη</button></div><div class="lm-viewer-status" role="status"></div><div class="lm-viewer-media"></div>`,{wide:true,onClose:()=>{destroyed=true;++mediaEpoch;releasePDF();releaseURLs();owner.render();}});
   if(owner.publication){
     const close=dialog.querySelector('.lm-close');
     close.classList.add('classroom-close');
@@ -103,21 +111,36 @@ export async function lmShowViewer(owner,building,start=0) {
     regionButtons();drawOverlay();
   }
   async function paintPDF() {
-    if(!pdf||destroyed)return;
+    const openPDF=pdf, epoch=mediaEpoch, pageNumber=page;
+    if(!openPDF||destroyed)return;
     renderTask?.cancel();
     try {
-      const p=await pdf.getPage(page);if(destroyed)return;
-      const base=p.getViewport({scale:1}),available=Math.max(300,body.clientWidth-40),scale=available/base.width*zoom;
-      const viewport=p.getViewport({scale}),canvas=body.querySelector('canvas'),ratio=Math.min(devicePixelRatio||1,2);
-      canvas.width=viewport.width*ratio;canvas.height=viewport.height*ratio;canvas.style.width=viewport.width+'px';canvas.style.height=viewport.height+'px';
-      renderTask=p.render({canvasContext:canvas.getContext('2d'),viewport,transform:ratio!==1?[ratio,0,0,ratio,0,0]:null});
-      await renderTask.promise;status.textContent=`Σελίδα ${page} από ${pdf.numPages}`;
-      body.querySelector('[data-page-prev]').disabled=page<=current().page_start;
-      body.querySelector('[data-page-next]').disabled=page>=Math.min(current().page_end,pdf.numPages);
-    } catch(e){if(e.name!=='RenderingCancelledException')status.textContent='Η σελίδα δεν αποδόθηκε: '+e.message;}
+      const pdfPage=await openPDF.getPage(pageNumber);
+      if(destroyed||epoch!==mediaEpoch||pageNumber!==page)return;
+      const canvas=body.querySelector('canvas');
+      const base=pdfPage.getViewport({scale:1});
+      const scale=Math.min(2.5, (body.clientWidth-36)/base.width)*zoom;
+      const viewport=pdfPage.getViewport({scale});
+      const ratio=window.devicePixelRatio||1;
+      canvas.width=viewport.width*ratio;
+      canvas.height=viewport.height*ratio;
+      canvas.style.width=viewport.width+'px';
+      canvas.style.height=viewport.height+'px';
+      const task=pdfPage.render({canvasContext:canvas.getContext('2d'),viewport,transform:ratio!==1?[ratio,0,0,ratio,0,0]:null});
+      renderTask=task;
+      await task.promise;
+      if(destroyed||epoch!==mediaEpoch||renderTask!==task)return;
+      status.textContent='Σελίδα '+pageNumber+' από '+openPDF.numPages;
+      body.querySelector('[data-page-prev]').disabled=pageNumber<=current().page_start;
+      body.querySelector('[data-page-next]').disabled=pageNumber>=Math.min(current().page_end,openPDF.numPages);
+    } catch(error){
+      if(!destroyed&&epoch===mediaEpoch&&error.name!=='RenderingCancelledException'){
+        status.textContent='Η σελίδα δεν αποδόθηκε: '+error.message;
+      }
+    }
   }
   async function show() {
-    const epoch=++mediaEpoch;index=lmClamp(index,0,Math.max(0,building.materials.length-1));zoom=1;first=null;active=null;tool='pan';renderTask?.cancel();pdf?.destroy();pdf=null;
+    const epoch=++mediaEpoch;index=lmClamp(index,0,Math.max(0,building.materials.length-1));zoom=1;first=null;active=null;tool='pan';releasePDF();
     releaseURLs();
     selector.innerHTML=building.materials.map((m,i)=>`<option value="${i}" ${i===index?'selected':''}>${lmEscape(m.label||'Υλικό '+(i+1))}</option>`).join('');
     dialog.querySelector('[data-prev]').disabled=index===0;dialog.querySelector('[data-next]').disabled=index>=building.materials.length-1;
@@ -131,7 +154,13 @@ export async function lmShowViewer(owner,building,start=0) {
         const useDownload=activity.download_only||m.type==='pdf'||m.type==='image';
         url=useDownload?(activity.download_url||activity.url):(activity.url||activity.download_url);
       }
-      if(assetId){blob=await owner.readAsset(assetId);url=URL.createObjectURL(blob);owner.objectURLs.add(url);viewerURLs.add(url);}
+      if(assetId){
+        blob=await owner.readAsset(assetId);
+        if(destroyed||epoch!==mediaEpoch)return;
+        url=URL.createObjectURL(blob);
+        owner.objectURLs.add(url);
+        viewerURLs.add(url);
+      }
       if(destroyed||epoch!==mediaEpoch)return;
       const external=lmSafeURL(url)?`<a href="${lmEscape(url)}" target="_blank" rel="noopener noreferrer">${activity?.download_only?'Λήψη από το Drive':'Άνοιγμα σε νέα καρτέλα'} ↗</a>`:blob?`<a href="${url}" download="${lmEscape(m.label)}">Λήψη αρχείου ↓</a>`:'';
       if(m.type==='text'){
@@ -148,8 +177,12 @@ export async function lmShowViewer(owner,building,start=0) {
         body.innerHTML=`<div class="lm-pdf-tools"><button data-page-prev>← Σελίδα</button><button data-page-next>Σελίδα →</button>${external}</div><div class="lm-pdf-page"><canvas aria-label="Σελίδα PDF"></canvas></div>`;
         const pdfjs=await import(owner.assetURL('vendor/pdfjs/pdf.mjs'));
         pdfjs.GlobalWorkerOptions.workerSrc=owner.assetURL('vendor/pdfjs/pdf.worker.mjs');
-        const task=pdfjs.getDocument({...blob?{data:new Uint8Array(await blob.arrayBuffer())}:{url},cMapUrl:owner.assetURL('vendor/pdfjs/cmaps/'),cMapPacked:true,standardFontDataUrl:owner.assetURL('vendor/pdfjs/standard_fonts/'),wasmUrl:owner.assetURL('vendor/pdfjs/wasm/')});
-        const loaded=await task.promise;if(destroyed||epoch!==mediaEpoch){loaded.destroy();return;}
+        const source=blob?{data:new Uint8Array(await blob.arrayBuffer())}:{url};
+        if(destroyed||epoch!==mediaEpoch)return;
+        const task=pdfjs.getDocument({...source,cMapUrl:owner.assetURL('vendor/pdfjs/cmaps/'),cMapPacked:true,standardFontDataUrl:owner.assetURL('vendor/pdfjs/standard_fonts/'),wasmUrl:owner.assetURL('vendor/pdfjs/wasm/')});
+        pdfTask=task;
+        const loaded=await task.promise;
+        if(destroyed||epoch!==mediaEpoch)return;
         pdf=loaded;page=Math.min(m.page_start,pdf.numPages);
         body.querySelector('[data-page-prev]').onclick=()=>{page=Math.max(m.page_start,page-1);void paintPDF();};
         body.querySelector('[data-page-next]').onclick=()=>{page=Math.min(m.page_end,pdf.numPages,page+1);void paintPDF();};
