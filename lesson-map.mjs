@@ -150,6 +150,7 @@ export class LessonMap {
   download(){const u=URL.createObjectURL(new Blob([JSON.stringify({schema_version:1,documents:[...this.documents],exported_at:new Date().toISOString()},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='lesson-map-private-copy.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
   open(id,versionId='',workspaceId=''){
     if(!this.documents.has(id)){this.notice='Ο χάρτης δεν βρέθηκε στον ιδιωτικό χώρο.';this.render();return;}
+    const previousView=this.viewKey;
     this.restoreHistorical();
     const row=this.documents.get(id);
     if(row.kind==='workspace')this.workspaceId=id;
@@ -163,6 +164,10 @@ export class LessonMap {
     if(this.publication)this.options.onNavigate(this.workspaceId,row.kind==='canvas'?id:'');
     else history.replaceState(null,'',lmRoute(this.workspaceId,row.kind==='canvas'?id:'',this.historical?.id||''));
     this.render();
+    if(this.viewKey!==previousView){
+      window.scrollTo(0,0);
+      this.host.scrollTop=0;
+    }
   }
   restoreHistorical(){if(this.historical){this.documents.set(this.historical.document_id,this.documentBeforeHistorical);this.historical=null;this.documentBeforeHistorical=null;}}
   async openLesson(id){
@@ -320,8 +325,8 @@ export class LessonMap {
     const entries=this.kind==='workspace'?this.visibleWorkspace.lessons.filter(l=>l.theme_id===node.id):node.materials;
     return `<aside class="lm-inspector"><div class="lm-panel-heading"><h2>${lmEscape(node.icon)} ${lmEscape(node.title)}</h2><button data-action="deselect" aria-label="Κλείσιμο επιλογής">✕</button></div><div class="lm-panel-buttons"><button data-action="title">Τίτλος / σύμβολο</button>${this.kind==='canvas'?`<button data-action="hide">${node.hidden?'Εμφάνιση στην τάξη':'Απόκρυψη στην τάξη'}</button>`:`<button data-action="remove">${this.planetary?'Αφαίρεση πλανήτη':'Αφαίρεση θεματικής'}</button>`}</div><h3>${this.kind==='workspace'?'Μαθήματα':'Το υλικό μου'} <small>${entries.length}</small></h3><ol class="lm-material-list">${entries.map((m,i)=>`<li><button class="lm-entry-open" data-open-entry="${m.id}">${lmEscape(m.title||m.label)}</button><div><button data-entry-up="${m.id}" ${i?'':'disabled'} aria-label="Μετακίνηση νωρίτερα">↑</button><button data-entry-down="${m.id}" ${i<entries.length-1?'':'disabled'} aria-label="Μετακίνηση αργότερα">↓</button>${this.kind==='canvas'?`<button data-edit-entry="${m.id}" aria-label="Αλλαγή υλικού">✎</button>`:''}<button data-remove-entry="${m.id}" aria-label="Αφαίρεση από τον χάρτη">✕</button></div></li>`).join('')}</ol><button class="lm-primary" data-action="${this.kind==='workspace'?'lesson':'material'}">＋ ${this.kind==='workspace'?'Προσθήκη μαθήματος':'Προσθήκη υλικού'}</button>${this.kind==='canvas'?`<h3>Σειρά αποκάλυψης</h3><ol class="lm-reveal-order">${this.document.presentation.reveal_order.map((id,i)=>`<li><span>${lmEscape(this.document.buildings.find(b=>b.id===id).title)}</span><button data-reveal-up="${id}" ${i?'':'disabled'} aria-label="Νωρίτερα στην αποκάλυψη">↑</button></li>`).join('')}</ol>`:''}<h3>Σχέσεις</h3><div class="lm-connection-list">${this.document.connections.filter(c=>c.from===node.id||c.to===node.id).map(c=>`<div><label><input type="checkbox" data-connection-visible="${c.id}" ${c.visible?'checked':''}> ${lmEscape(c.verb)}</label>${c.phrase?`<p>${lmEscape(c.phrase)}</p>`:''}<button data-edit-connection="${c.id}">Αλλαγή</button><button data-remove-connection="${c.id}" aria-label="Αφαίρεση σχέσης">✕</button></div>`).join('')||'<p>Επίλεξε «Σύνδεση» και δύο στοιχεία στον χάρτη.</p>'}</div></aside>`;
   }
-  worldMarkup(){
-    const workspace=this.kind==='workspace',nodes=this.nodes,doc=this.document;
+  worldMarkup(map){
+    const workspace=Boolean(map),nodes=map?.themes||this.nodes,doc=this.document;
     const planets=workspace&&this.planetary;
     const chronology=workspace&&this.chronological;
     const illustrated=workspace&&this.illustratedIslands;
@@ -345,7 +350,7 @@ export class LessonMap {
         <svg class="lm-city-paths" viewBox="0 0 1600 900" aria-hidden="true"><path d="M800 180 Q800 450 1320 420 M800 450 Q600 480 260 420 M800 450 Q800 550 1120 750 M800 450 Q600 600 500 750"/></svg>`;
     return `${deco}${timeline}<svg class="lm-threads" viewBox="0 0 1600 900" aria-label="Σχέσεις εννοιών">${paths}</svg>${nodes.filter(visible).map(n=>{
       const b=n.box,selected=this.selected===n.id||this.connectFrom===n.id,unrevealed=!this.edit&&!allowed.has(n.id);
-      const content=workspace?this.visibleWorkspace.lessons.filter(l=>l.theme_id===n.id):n.materials;
+      const content=map?map.lessons.filter(l=>l.theme_id===n.id):n.materials;
       const sprite=workspace
         ? planets?lmPlanetArtwork(n.artwork)
           : chronology?(lmByzantiumArtwork(n.artwork)||'trinitarian')
@@ -373,6 +378,24 @@ export class LessonMap {
     }).join('')}`;
   }
   spriteURL(name){return this.assetURL(`assets/lesson-map/${this.style.folder}${name}.webp`);}
+  islandLessonNav(map){
+    if(!map.lessons.length)return '';
+    const groups=map.themes.map(theme=>{
+      const lessons=map.lessons.filter(lesson=>lesson.theme_id===theme.id);
+      if(!lessons.length)return '';
+      return `<section class="lm-lesson-group">
+        <h3>${theme.icon?`<span aria-hidden="true">${lmEscape(theme.icon)}</span>`:''} ${lmEscape(theme.title)}</h3>
+        <ul>${lessons.map(lesson=>`<li><button data-open-lesson="${lesson.id}">${lmEscape(lesson.title)}</button></li>`).join('')}</ul>
+      </section>`;
+    });
+    return `<nav class="lm-lesson-list" aria-labelledby="lm-lesson-list-title">
+      <div class="lm-lesson-list-heading">
+        <h2 id="lm-lesson-list-title">Μαθήματα ανά νησίδα</h2>
+        <button data-action="view-map">Στον χάρτη <span aria-hidden="true">↓</span></button>
+      </div>
+      ${groups.join('')}
+    </nav>`;
+  }
   quickNav(workspace){
     if(workspace&&this.planetary){
       const cities=this.visibleWorkspace.lessons.map(lesson=>`<button data-open-lesson="${lesson.id}">${lmEscape(lesson.title)}</button>`);
@@ -395,10 +418,25 @@ export class LessonMap {
     if(!this.documents.has(this.workspaceId))this.workspaceId=LM_WORKSPACE_ID;if(!this.documents.has(this.current))this.current=this.workspaceId;
     const workspace=this.kind==='workspace',registered=this.document.registered,version=this.versions.get(this.current);
     const memberships=!workspace?lmMemberships(this.documents,this.current):[];
+    const map=workspace?this.visibleWorkspace:null;
+    const lessonNav=map&&!this.planetary&&!this.chronological?this.islandLessonNav(map):'';
     this.host.className=`lesson-map ${workspace?'lm-archipelago':'lm-city'} ${this.edit?'lm-edit':'lm-class'} lm-style-${this.workspace.visual_theme||'default'} ${this.illustratedIslands?'lm-illustrated-islands':''} ${this.saving?'lm-saving':''}`;
     this.host.dataset.planetSurface=lmPlanetArtwork(this.cityPlanet?.artwork);
     const header=this.publication?'':`<header class="lm-header"><button class="lm-brand" data-action="exit"><span>📖</span><div><strong>Χάρτης Μαθήματος</strong><small>${this.planetary?'Πλανήτες και πόλεις':'Νησίδες και πολιτεία γνώσης'}</small></div></button><div class="lm-context">${this.mapSelectors()}<span class="lm-privacy">${this.privateMode?'Ιδιωτικός χώρος':'Δείγμα χάρτη'}</span></div><div class="lm-header-actions">${this.privateMode?`<button data-action="mode" class="${!this.edit?'lm-primary':''}">${this.edit?'▷ Προβολή τάξης':'✎ Επεξεργασία'}</button>`:`<a href="${lmEscape(this.registry.publication?.cloud_url||'#')}?view=map" target="_top">Στον ιδιωτικό χώρο ↗</a>`}<button data-action="fullscreen" aria-label="Πλήρης οθόνη">⛶</button></div></header>`;
-    this.host.innerHTML=`${header}<nav class="lm-breadcrumb" aria-label="Επίπεδα χάρτη"><button data-action="home" ${workspace?'aria-current="page"':''}>${this.planetary?'Πλανήτες':this.publication?'Θεματικές ενότητες':'1 · Θεματικές ενότητες'}</button>${workspace?(this.publication||this.planetary?'':this.illustratedIslands?`<strong>${lmEscape(this.workspace.title)}</strong>`:'<span>Χτίζουμε τις ενότητες σιγά σιγά</span>'):`<span>›</span><strong>${this.publication?'':'2 · '}${lmEscape(this.document.title)}</strong>`}${this.historical?'<span class="lm-version-badge">Παλαιότερη αποθηκευμένη έκδοση</span>':''}</nav>${this.edit&&memberships.length>1?`<p class="lm-shared-notice">Κοινό μάθημα · Χρησιμοποιείται σε ${memberships.length} χάρτες: ${memberships.map(m=>lmEscape(m.grade+' · '+m.title)).join(' · ')}. Οι αλλαγές ισχύουν σε όλες τις εμφανίσεις.</p>`:''}${this.edit?`<div class="lm-toolbar" role="toolbar" aria-label="Επεξεργασία χάρτη">${workspace?`<button data-action="theme">＋ ${this.planetary?'Πλανήτης':'Θεματική'}</button><button data-action="lesson">＋ Μάθημα</button><button data-action="shared-city">＋ Κοινή πόλη</button><button data-action="new-map">＋ Χάρτης</button>`:'<button class="lm-primary" data-action="material">＋ Υλικό</button>'}<span class="lm-separator"></span><button data-tool="select" aria-pressed="${this.tool==='select'}">↖ Επιλογή</button><button data-tool="connect" aria-pressed="${this.tool==='connect'}">🔗 Σύνδεση</button><button data-action="title">✎ Τίτλος</button><button data-action="undo" ${this.undoStack.length?'':'disabled'} aria-label="Αναίρεση">↶</button><button data-action="redo" ${this.redoStack.length?'':'disabled'} aria-label="Επανάληψη">↷</button><button data-action="settings" aria-label="Ρυθμίσεις">⚙</button><button data-action="atlas">Συνδέσεις και κοινό υλικό</button><span class="lm-toolbar-spacer"></span><button data-action="notes">📥 Από σημειώσεις</button>${this.document.import_source?'<button data-action="enrich-notes">Συμπλήρωση από Πιλοτήριο</button>':''}<button data-action="import">↑ Μεταφορά μαθήματος</button><button data-action="download" title="Ιδιωτικό αντίγραφο διάταξης· τα αρχεία φυλάσσονται χωριστά">↓ Αντίγραφο</button><button data-action="save" class="lm-save" ${this.saving?'disabled':''}>${this.saving?'Αποθήκευση…':'✓ Αποθήκευση πρόχειρου'}</button>${workspace?'':`<button data-action="register" ${this.saving?'disabled':''}>${registered?'✓ Καταχωρισμένο':'Καταχώριση στο Πιλοτήριο'}</button>`}</div>`:`<div class="lm-presentation-tools"><button data-action="fit">Προβολή όλων</button><button data-action="connections">${this.showConnections?'Απόκρυψη':'Εμφάνιση'} σχέσεων</button>${workspace?'':`<button data-action="reveal-start">Σταδιακή αποκάλυψη</button><button data-action="reveal-next" ${this.revealCount>=this.revealOrder.length?'disabled':''}>Επόμενο οικοδόμημα →</button><button data-tool="connect" aria-pressed="${this.tool==='connect'}">🔗 Σύνδεση εννοιών</button>`}</div>`}<div class="lm-status ${this.error?'lm-error':''}" role="status">${lmEscape(!this.edit&&this.privateMode?(this.tool==='connect'?this.notice:workspace?(this.illustratedIslands&&!this.visibleWorkspace.lessons.length?'Οι νησίδες είναι έτοιμες για προσθήκη μαθημάτων.':'Επίλεξε ένα μάθημα για να ανοίξεις την πολιτεία γνώσης.'):'Επίλεξε ένα οικοδόμημα για να ανοίξεις το υλικό του.'):this.notice||(!this.privateMode?'Το δείγμα ανοίγει χωρίς ιδιωτικό υλικό. Στον χώρο εκπαιδευτικού προσθέτεις και αποθηκεύεις τα δικά σου μέσα.':this.dirty()?'Πρόχειρος χάρτης · αποθήκευσε όταν είσαι έτοιμος.':'✓ Αποθηκευμένο στον ιδιωτικό χώρο.'))}${this.conflict?'<button data-action="reload">Άνοιγμα τελευταίας έκδοσης</button>':''}</div><div class="lm-main"><div class="lm-viewport" tabindex="0" aria-label="Καμβάς: μετακίνηση, μεγέθυνση και επιλογή στοιχείων"><div class="lm-world">${this.worldMarkup()}</div><div class="lm-zoom-controls"><button data-action="zoom-in" aria-label="Μεγέθυνση χάρτη">＋</button><button data-action="zoom-out" aria-label="Σμίκρυνση χάρτη">−</button><button data-action="fit" aria-label="Προβολή όλου του χάρτη">⌂</button></div><span class="lm-canvas-caption">${workspace?(this.planetary?'Επίλεξε πόλη':'Θεματικές νησίδες'):'Πέντε οικοδομήματα · μία διαδρομή γνώσης'}</span></div>${this.edit?this.panelMarkup():''}</div>${this.quickNav(workspace)}${!workspace&&this.privateMode&&this.edit&&version?'<div class="lm-after-lesson"><button data-action="review">Τι έγινε στην τάξη · Αποτίμηση χάρτη →</button></div>':''}<input type="file" id="lm-file" accept="image/png,image/jpeg,image/webp,application/pdf,text/html,.html,.htm" hidden>`;
+    const canvas=`<div class="lm-main">
+      <div class="lm-viewport" tabindex="0" aria-label="Καμβάς: μετακίνηση, μεγέθυνση και επιλογή στοιχείων">
+        <div class="lm-world">${this.worldMarkup(map)}</div>
+        <div class="lm-zoom-controls">
+          <button data-action="zoom-in" aria-label="Μεγέθυνση χάρτη">＋</button>
+          <button data-action="zoom-out" aria-label="Σμίκρυνση χάρτη">−</button>
+          <button data-action="fit" aria-label="Προβολή όλου του χάρτη">⌂</button>
+        </div>
+        <span class="lm-canvas-caption">${workspace?(this.planetary?'Επίλεξε πόλη':'Θεματικές νησίδες'):'Πέντε οικοδομήματα · μία διαδρομή γνώσης'}</span>
+      </div>
+      ${this.edit?this.panelMarkup():''}
+    </div>${this.quickNav(workspace)}`;
+    const layout=lessonNav?`<div class="lm-workspace-layout">${lessonNav}<div>${canvas}</div></div>`:canvas;
+    this.host.innerHTML=`${header}<nav class="lm-breadcrumb" aria-label="Επίπεδα χάρτη"><button data-action="home" ${workspace?'aria-current="page"':''}>${this.planetary?'Πλανήτες':this.publication?'Θεματικές ενότητες':'1 · Θεματικές ενότητες'}</button>${workspace?(this.publication||this.planetary?'':this.illustratedIslands?`<strong>${lmEscape(this.workspace.title)}</strong>`:'<span>Χτίζουμε τις ενότητες σιγά σιγά</span>'):`<span>›</span><strong>${this.publication?'':'2 · '}${lmEscape(this.document.title)}</strong>`}${this.historical?'<span class="lm-version-badge">Παλαιότερη αποθηκευμένη έκδοση</span>':''}</nav>${this.edit&&memberships.length>1?`<p class="lm-shared-notice">Κοινό μάθημα · Χρησιμοποιείται σε ${memberships.length} χάρτες: ${memberships.map(m=>lmEscape(m.grade+' · '+m.title)).join(' · ')}. Οι αλλαγές ισχύουν σε όλες τις εμφανίσεις.</p>`:''}${this.edit?`<div class="lm-toolbar" role="toolbar" aria-label="Επεξεργασία χάρτη">${workspace?`<button data-action="theme">＋ ${this.planetary?'Πλανήτης':'Θεματική'}</button><button data-action="lesson">＋ Μάθημα</button><button data-action="shared-city">＋ Κοινή πόλη</button><button data-action="new-map">＋ Χάρτης</button>`:'<button class="lm-primary" data-action="material">＋ Υλικό</button>'}<span class="lm-separator"></span><button data-tool="select" aria-pressed="${this.tool==='select'}">↖ Επιλογή</button><button data-tool="connect" aria-pressed="${this.tool==='connect'}">🔗 Σύνδεση</button><button data-action="title">✎ Τίτλος</button><button data-action="undo" ${this.undoStack.length?'':'disabled'} aria-label="Αναίρεση">↶</button><button data-action="redo" ${this.redoStack.length?'':'disabled'} aria-label="Επανάληψη">↷</button><button data-action="settings" aria-label="Ρυθμίσεις">⚙</button><button data-action="atlas">Συνδέσεις και κοινό υλικό</button><span class="lm-toolbar-spacer"></span><button data-action="notes">📥 Από σημειώσεις</button>${this.document.import_source?'<button data-action="enrich-notes">Συμπλήρωση από Πιλοτήριο</button>':''}<button data-action="import">↑ Μεταφορά μαθήματος</button><button data-action="download" title="Ιδιωτικό αντίγραφο διάταξης· τα αρχεία φυλάσσονται χωριστά">↓ Αντίγραφο</button><button data-action="save" class="lm-save" ${this.saving?'disabled':''}>${this.saving?'Αποθήκευση…':'✓ Αποθήκευση πρόχειρου'}</button>${workspace?'':`<button data-action="register" ${this.saving?'disabled':''}>${registered?'✓ Καταχωρισμένο':'Καταχώριση στο Πιλοτήριο'}</button>`}</div>`:`<div class="lm-presentation-tools"><button data-action="fit">Προβολή όλων</button><button data-action="connections">${this.showConnections?'Απόκρυψη':'Εμφάνιση'} σχέσεων</button>${workspace?'':`<button data-action="reveal-start">Σταδιακή αποκάλυψη</button><button data-action="reveal-next" ${this.revealCount>=this.revealOrder.length?'disabled':''}>Επόμενο οικοδόμημα →</button><button data-tool="connect" aria-pressed="${this.tool==='connect'}">🔗 Σύνδεση εννοιών</button>`}</div>`}<div class="lm-status ${this.error?'lm-error':''}" role="status">${lmEscape(!this.edit&&this.privateMode?(this.tool==='connect'?this.notice:workspace?(this.illustratedIslands&&!this.visibleWorkspace.lessons.length?'Οι νησίδες είναι έτοιμες για προσθήκη μαθημάτων.':'Επίλεξε ένα μάθημα για να ανοίξεις την πολιτεία γνώσης.'):'Επίλεξε ένα οικοδόμημα για να ανοίξεις το υλικό του.'):this.notice||(!this.privateMode?'Το δείγμα ανοίγει χωρίς ιδιωτικό υλικό. Στον χώρο εκπαιδευτικού προσθέτεις και αποθηκεύεις τα δικά σου μέσα.':this.dirty()?'Πρόχειρος χάρτης · αποθήκευσε όταν είσαι έτοιμος.':'✓ Αποθηκευμένο στον ιδιωτικό χώρο.'))}${this.conflict?'<button data-action="reload">Άνοιγμα τελευταίας έκδοσης</button>':''}</div>${layout}${!workspace&&this.privateMode&&this.edit&&version?'<div class="lm-after-lesson"><button data-action="review">Τι έγινε στην τάξη · Αποτίμηση χάρτη →</button></div>':''}<input type="file" id="lm-file" accept="image/png,image/jpeg,image/webp,application/pdf,text/html,.html,.htm" hidden>`;
     this.bind();this.bindPointer();
     const viewport=this.host.querySelector('.lm-viewport');
     if(!this.views.has(this.viewKey))this.views.set(this.viewKey,lmFit(this.nodes.map(n=>n.box),viewport.clientWidth,viewport.clientHeight));
@@ -453,6 +491,12 @@ export class LessonMap {
     if(action==='title')return this.editTitle();if(action==='settings')return this.settings();if(action==='remove'||action==='hide')return this.removeSelected();
     if(action==='undo')return this.undo();if(action==='redo')return this.undo(true);if(action==='download')return this.download();if(action==='reload')return this.reload();if(action==='saved')return this.addSaved();
     if(action==='deselect'){this.selected='';this.render();return;}
+    if(action==='view-map'){
+      const viewport=this.host.querySelector('.lm-viewport');
+      viewport.scrollIntoView({block:'start'});
+      viewport.focus({preventScroll:true});
+      return;
+    }
     if(action==='zoom-in')return this.zoom(1.25);if(action==='zoom-out')return this.zoom(1/1.25);if(action==='fit')return this.fit();
     if(action==='connections'){this.showConnections=!this.showConnections;this.render();return;}
     if(action==='reveal-start'){this.revealCount=0;this.render();return;}
@@ -462,9 +506,14 @@ export class LessonMap {
   }
   bindPointer(){
     const vp=this.host.querySelector('.lm-viewport');let pointers=new Map(),g=null;
-    vp.addEventListener('wheel',e=>{e.preventDefault();const r=vp.getBoundingClientRect();this.zoom(Math.exp(-e.deltaY*.0015),e.clientX-r.left,e.clientY-r.top);},{passive:false});
+    vp.addEventListener('wheel',e=>{
+      if(e.target.closest('.lm-island-lessons'))return;
+      e.preventDefault();
+      const r=vp.getBoundingClientRect();
+      this.zoom(Math.exp(-e.deltaY*.0015),e.clientX-r.left,e.clientY-r.top);
+    },{passive:false});
     vp.addEventListener('pointerdown',e=>{
-      if(e.target.closest('.lm-zoom-controls'))return;
+      if(e.target.closest('.lm-zoom-controls,.lm-island-lessons'))return;
       const handle=e.target.closest('[data-drag-node],[data-resize-node]');
       if(e.target.closest('button,a,input')&&!handle)return;
       if(this.saving||this.tool==='connect')return;
@@ -497,9 +546,13 @@ export class LessonMap {
         });
       }
     });
-    const end=e=>{pointers.delete(e.pointerId);if(!g)return;if(g.type==='node'||g.type==='resize'){this.undoStack.push(g.before);this.redoStack=[];this.pending.clear();this.notice='Η διάταξη άλλαξε.';g=null;this.render();return;}if(pointers.size===0)g=null;else{const p=[...pointers.values()][0];g={type:'pan',x:p.x,y:p.y,view:{...this.views.get(this.viewKey)}};}};
+    const end=e=>{if(!pointers.delete(e.pointerId)||!g)return;if(g.type==='node'||g.type==='resize'){this.undoStack.push(g.before);this.redoStack=[];this.pending.clear();this.notice='Η διάταξη άλλαξε.';g=null;this.render();return;}if(pointers.size===0)g=null;else{const p=[...pointers.values()][0];g={type:'pan',x:p.x,y:p.y,view:{...this.views.get(this.viewKey)}};}};
     vp.addEventListener('pointerup',end);
-    vp.addEventListener('pointercancel',e=>{if(g?.before)this.documents=new Map(JSON.parse(g.before));pointers.clear();g=null;this.render();});
+    vp.addEventListener('pointercancel',e=>{
+      if(!pointers.has(e.pointerId))return;
+      if(g?.before)this.documents=new Map(JSON.parse(g.before));
+      pointers.clear();g=null;this.render();
+    });
   }
   destroy(){this.abort.abort();this.resizeObserver?.disconnect();this.host.querySelectorAll('dialog').forEach(d=>d.remove());for(const u of this.objectURLs)URL.revokeObjectURL(u);this.blobs.clear();}
 }
