@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "eb61ef14bb0b4c62b738c7ad152f97ef",
+  "release_id": "f6890fb80271414b9f3a1a34b67b3796",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "id": "8dbc1427-360a-4ffd-8d95-15efc60ae3af",
+      "id": "0c43cd91-b430-4b0b-88c2-8ad49b107dfc",
       "document_id": "ff5e306c-40a4-51f4-8236-824adddf946e",
       "kind": "canvas",
       "document": {
@@ -1176,6 +1176,46 @@
                 "page_start": 1,
                 "page_end": 1,
                 "asset_id": "ca84bbe6c01167aa7a71e05ae7172bff6ca0977a4f463d7088630f55f3b4853d"
+              },
+              {
+                "id": "d0d1ea9a-20a8-46f0-a925-06171b242028",
+                "label": "Ανθισμένη ράβδος του Ααρών.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "bce1491cfd82c7ef39b3a7e686cf9229f1cee327c3995ed011dc952e81a80767"
+              },
+              {
+                "id": "f6cad8ea-5e06-4e26-ad76-8213307c5ca1",
+                "label": "Ανοιχτό χρυσό αγγείο με μάννα.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "dd679807381eee09e42d358b052778777dcab6fe78a6d375dcc4cba4d3054e93"
+              },
+              {
+                "id": "7858c89f-eac9-435e-96f3-2fad9634534a",
+                "label": "Μωυσής, πλήρης τρισδιάστατη αναφορά χαρακτήρα.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "e04314c26f8fecbc64fe2a5afc61286c7f5f3b4f4f2ef7b463ead2f8cf8a0006"
+              },
+              {
+                "id": "c64211d0-3379-48a8-a7cb-0eb7aadaee9e",
+                "label": "Χάλκινο φίδι σε ξύλινο στύλο.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "c01de3b77abaa7971f1662cf274070105dfb7d396c2769c26c14d31452456299"
+              },
+              {
+                "id": "ba10bbf4-ba40-40f2-97ee-db416c525798",
+                "label": "Χρυσή Κιβωτός της Διαθήκης με Χερουβείμ.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e"
               }
             ]
           },
@@ -4301,6 +4341,26 @@
     "ca84bbe6c01167aa7a71e05ae7172bff6ca0977a4f463d7088630f55f3b4853d": {
       "path": "media/ca84bbe6c01167aa7a71e05ae7172bff6ca0977a4f463d7088630f55f3b4853d.jpg",
       "mime": "image/jpeg"
+    },
+    "bce1491cfd82c7ef39b3a7e686cf9229f1cee327c3995ed011dc952e81a80767": {
+      "path": "media/bce1491cfd82c7ef39b3a7e686cf9229f1cee327c3995ed011dc952e81a80767.png",
+      "mime": "image/png"
+    },
+    "dd679807381eee09e42d358b052778777dcab6fe78a6d375dcc4cba4d3054e93": {
+      "path": "media/dd679807381eee09e42d358b052778777dcab6fe78a6d375dcc4cba4d3054e93.png",
+      "mime": "image/png"
+    },
+    "e04314c26f8fecbc64fe2a5afc61286c7f5f3b4f4f2ef7b463ead2f8cf8a0006": {
+      "path": "media/e04314c26f8fecbc64fe2a5afc61286c7f5f3b4f4f2ef7b463ead2f8cf8a0006.png",
+      "mime": "image/png"
+    },
+    "c01de3b77abaa7971f1662cf274070105dfb7d396c2769c26c14d31452456299": {
+      "path": "media/c01de3b77abaa7971f1662cf274070105dfb7d396c2769c26c14d31452456299.png",
+      "mime": "image/png"
+    },
+    "b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e": {
+      "path": "media/b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e.png",
+      "mime": "image/png"
     },
     "1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b": {
       "path": "media/1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b.jpg",
