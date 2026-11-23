@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "a79c3f7f496d4e999afbb945fdd9f4c7",
+  "release_id": "11e1e24dbd4f4679896732f3db0c38e7",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -11,13 +11,13 @@
   ],
   "documents": [
     {
-      "id": "664eee00-b756-4c3a-b351-c426afcbe54b",
-      "document_id": "2fa8c59c-98b4-51d0-ae0b-eb5a275e69cf",
+      "id": "044070a6-0579-4580-a156-b16d444d0b4d",
+      "document_id": "167caddf-5a29-59d1-a2d9-65aba950d6ec",
       "kind": "canvas",
       "document": {
         "schema_version": 1,
-        "title": "Δημιουργία του ανθρώπου",
-        "grade": "Α΄ Γυμνασίου",
+        "title": "Πεντηκοστή και ζωή της πρώτης Εκκλησίας",
+        "grade": "Β΄ Γυμνασίου",
         "verbs": [],
         "buildings": [
           {
@@ -46,12 +46,12 @@
             "hidden": false,
             "materials": [
               {
-                "id": "437fe1f3-6687-5367-b4e4-b6e5ad63b834",
-                "label": "Δημιουργία του ανθρώπου · άσκηση με κενά",
+                "id": "8620ad43-8be1-52b4-b930-a1b17da1081b",
+                "label": "Πεντηκοστή και πρώτη Εκκλησία · άσκηση με κενά",
                 "type": "image",
                 "page_start": 1,
                 "page_end": 1,
-                "asset_id": "17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f"
+                "asset_id": "1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b"
               }
             ]
           },
@@ -81,810 +81,36 @@
             "hidden": false,
             "materials": [
               {
-                "id": "be0734ef-1008-56a0-8a8f-15dc8e087152",
-                "label": "HTML · Ο άνθρωπος: δώρο και κλήση",
+                "id": "d1804860-2472-537e-8415-5317b833f20a",
+                "label": "HTML · Πεντηκοστή — Το Πνεύμα συγκροτεί την Εκκλησία",
                 "type": "html",
                 "page_start": 1,
                 "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/pentecost-music-mindmap.html"
               },
               {
-                "id": "993b2550-c342-5f25-a4c4-61363bea40a0",
-                "label": "Δημιουργία · Αναλόγιο εννοιών",
+                "id": "9a834919-f4fa-5a2a-be3c-babe5319bc3b",
+                "label": "HTML · Πεντηκοστή — Το Πνεύμα συγκροτεί την Εκκλησία",
                 "type": "html",
                 "page_start": 1,
                 "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/apps/animated-concept-canvas/creation-concepts.html"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "d0cac706-1060-4b27-bf10-6e812b69b1fa",
-      "document_id": "eab8e20a-e8fe-5bce-bd59-0f88e74f77cf",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Η παραβολή των ταλάντων",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "92dbf624-ec06-5cd5-9453-a861e796928a",
-                "label": "Παραβολή των ταλάντων · άσκηση με κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "a5a89ab501e943d3b200fdd456383af513613f88ef5b041f5cd808249db22772"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "aeecd0ea-1875-56a9-905a-c0910991c8ce",
-                "label": "HTML · Η παραβολή των ταλάντων",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/talents-music-mindmap.html"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "ccb63b86-7a93-402a-95ee-d29c25a1ad95",
-      "document_id": "07c90d03-c6fa-57af-983d-231d7cc26f1a",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Άγιος Λουκάς ο Ιατρός",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "23c119b3-564f-5ab2-aaf0-2fb51c159f64",
-                "label": "Άγιος Λουκάς ο Ιατρός · άσκηση με κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "abf092101985c0ea9f8d81eb8753a1b7183d45859f81f0243f1d3a1662e58421"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "95a95af7-fdec-5c98-aacd-6e8c968f3d1d",
-                "label": "HTML · Άγιος Λουκάς ο Ιατρός",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/saint-luke-journey.html"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "29271d59-2505-426f-9d6d-f0eb31a174c3",
-      "document_id": "d15602cc-a42b-4c76-9577-0535b43cfa02",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Κατ’ εικόνα → Τάλαντα → Άγιος Λουκάς → Καθ’ ομοίωση",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "8d988e55-db54-4cdc-884b-4dabed7234fd",
-                "label": "Δημιουργία του ανθρώπου · διδακτική απόδοση",
-                "type": "text",
-                "page_start": 1,
-                "page_end": 1,
-                "text": "Δημιουργία του ανθρώπου — Α΄ Γυμνασίου\nΔοσμένο υλικό του εκπαιδευτικού. Διδακτική απόδοση, όχι αυτούσιο πατερικό παράθεμα.\n\nΣύμφωνα με τον Άγιο Ιωάννη τον Δαμασκηνό, ο Θεός δημιούργησε τον άνθρωπο με σώμα από τη γη και ψυχή με τη θεία πνοή Του.\nΤο σώμα και η ψυχή δημιουργήθηκαν ταυτόχρονα.\nΟ άνθρωπος πλάστηκε «κατ’ εικόνα» Θεού, δηλαδή με λογική σκέψη και ελευθερία να επιλέγει.\nΤο «καθ’ ομοίωσιν» σημαίνει ότι ο άνθρωπος καλείται να μοιάσει στον Θεό καλλιεργώντας τις αρετές.\nΟ άνθρωπος ενώνει μέσα του τον υλικό και τον πνευματικό κόσμο και έχει ευθύνη για τη δημιουργία.\nΣκοπός της ζωής του είναι να πλησιάζει τον Θεό και να συμμετέχει στη θεία ζωή με τη χάρη Του.\n\nΑπαντήσεις στα κενά: σώμα · ψυχή · ταυτόχρονα · ελευθερία · αρετές · πνευματικό · Θεό · χάρη.\n"
+                "asset_id": "eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260"
               },
               {
-                "id": "16a274f0-6730-4f7f-bb40-fb95d7eb1cb5",
-                "label": "Η παραβολή των ταλάντων · Μτ 25, 14–30",
-                "type": "text",
-                "page_start": 1,
-                "page_end": 1,
-                "text": "Η παραβολή των ταλάντων (Μτ 25, 14­30)\n\nΗ βασιλεία του Θεού μοιάζει μ’ έναν άνθρωπο ο οποίος, φεύγοντας για ταξίδι, κάλεσε τους\nδούλους του και τους εμπιστεύτηκε τα υπάρχοντά του. Σ’ άλλον έδωσε πέντε τάλαντα, σ’ άλλον δύο, σ’ άλλον ένα, στον καθένα ανάλογα με την ικανότητά του, κι έφυγε αμέσως για το\nταξίδι. Αυτός που έλαβε τα πέντε τάλαντα πήγε, τα εκμεταλλεύτηκε και κέρδισε άλλα πέντε.\nΚι εκείνος που έλαβε τα δύο τάλαντα κέρδισε επίσης άλλα δύο. Εκείνος όμως που έλαβε το\nένα τάλαντο πήγε κι έσκαψε στη γη και έκρυψε τα χρήματα του κυρίου του.\n\nΎστερα από ένα μεγάλο χρονικό διάστημα, γύρισε ο κύριος εκείνων των δούλων και έκανε\nλογαριασμό μαζί τους. Παρουσιάστηκε τότε εκείνος που είχε λάβει τα πέντε τάλαντα και του\nέφερε άλλα πέντε λέγοντας: «Κύριε, μου εμπιστεύτηκες πέντε τάλαντα∙ κοίτα, κέρδισα με αυτά άλλα πέντε». Του είπε ο κύριός του: «Εύγε, καλέ και έμπιστε δούλε! Αποδείχτηκες αξιόπιστος σε μικρές υποθέσεις, γι’ αυτό θα σου εμπιστευτώ μεγαλύτερες. Έλα να γιορτάσεις μαζί\nμου». Παρουσιάστηκε κι ο άλλος με τα δύο τάλαντα και είπε: «Κύριε, μου εμπιστεύτηκες δύο\nτάλαντα∙ κοίτα, κέρδισα άλλα δύο. Του είπε ο κύριος του: «εύγε, καλέ και έμπιστε δούλε! Αποδείχτηκες αξιόπιστος σε μικρές υποθέσεις, γι’ αυτό θα σου εμπιστευτώ μεγαλύτερες. Έλα να\nγιορτάσεις μαζί μου». Παρουσιάστηκε κι εκείνος που είχε λάβει το ένα τάλαντο και είπε:\n«Κύριε, ήξερα πως είσαι σκληρός άνθρωπος. Θερίζεις εκεί όπου δεν έσπειρες και συνάζεις\nκαρπούς εκεί που δε φύτεψες. Γι’ αυτό φοβήθηκα και πήγα και έκρυψα το τάλαντό σου στη\nγη. Να τα λεφτά σου. Και του αποκρίθηκε ο κύριός του: «Δούλε κακέ και οκνηρέ, ήξερες πως\nθερίζω όπου δεν έσπειρα, και συνάζω καρπούς απ’ όπου δε φύτεψα! Τότε έπρεπε να βάλεις\nτα χρήματά μου στην τράπεζα κι εγώ, όταν θα γυρνούσα πίσω, θα τα έπαιρνα με τόκο. Πάρτε\nτου, λοιπόν, το τάλαντο και δώστε το σ’ αυτόν που είχε τα δέκα τάλαντα. Γιατί σε καθέναν\nπου έχει, θα του δοθεί με το παραπάνω και θα ’χει περίσσευμα∙ ενώ απ’ όποιον δεν έχει, θα\nτου πάρουν και τα λίγα που έχει».\n"
-              }
-            ]
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "a9d01fcf-ad42-467f-ab22-d564498227c3",
-                "label": "Κατ’ εικόνα · λογική και ελευθερία",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "00cf7783f3408e13e4a9e5c14c332556c66afa5a3a26c51fb9ff1a5be974557d"
-              },
-              {
-                "id": "915d845c-8256-41d6-b9a7-cac901237976",
-                "label": "Άγιος Λουκάς ο Ιατρός · γνώση, πίστη, προσφορά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "dab693f73f51c12347ba4c037a1741b8e4a8382a680e52277680cfa8ff31a87b"
-              },
-              {
-                "id": "8dc98097-8a11-4601-9529-cf864f472788",
-                "label": "Καθ’ ομοίωση · αρετές και χάρη",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "015592a39949b4c978078289ec80238a0aa84f40350113b116718773f1c7a71c"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "382be01c-4b7c-492d-bfdb-a6b506069e7d",
-                "label": "Η διαδρομή από το κατ’ εικόνα στο καθ’ ομοίωση",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "4af0a36188176656aa1033b8b0015f4e4a61f07ece08b07a75a1e0fca6163bb9"
-              }
-            ]
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "77ea6828-d0d3-45ea-8efe-466573449cce",
-                "label": "Η γνωστική μας διαδρομή — Από το κατ’ εικόνα στο καθ’ ομοίωση",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "8c20090f83e1094ad0650aed64234c8188ecb68cd634db004b8c5fceb8ceb0c3"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "c5c963bb-5cac-48bd-8cac-64a9311b8db4",
-                "label": "Το ερώτημα της σύνθεσης",
-                "type": "text",
-                "page_start": 1,
-                "page_end": 1,
-                "text": "Ποια δυνατότητά σου μπορείς να καλλιεργήσεις και να προσφέρεις στους άλλους; Σύνδεσε το παράδειγμά σου με τα Τάλαντα, τον Άγιο Λουκά και την πορεία προς το καθ’ ομοίωση."
-              }
-            ]
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [
-          {
-            "id": "a1f3a66b-c5af-4395-a8aa-c73ce7ef9f5b",
-            "from": "text",
-            "to": "images",
-            "verb": "φανερώνει",
-            "phrase": "Η λογική και η ελευθερία είναι δώρα που καλούμαστε να καλλιεργήσουμε.",
-            "visible": true
-          },
-          {
-            "id": "a659137c-6bbb-47d0-8728-9a0e637be87a",
-            "from": "mindmap",
-            "to": "html",
-            "verb": "καλλιεργεί",
-            "phrase": "Από τα χαρίσματα και την ευθύνη περνάμε στην προσφορά προς τον άλλον.",
-            "visible": true
-          },
-          {
-            "id": "38063695-aa72-4b30-bae5-72c22081b96b",
-            "from": "html",
-            "to": "synthesis",
-            "verb": "εφαρμόζεται στη ζωή",
-            "phrase": "Ο άγιος Λουκάς αξιοποιεί τη γνώση της ιατρικής ως έμπρακτη προσφορά.",
-            "visible": true
-          }
-        ],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "0974f074-0777-4527-bbe4-5d29e0cfacea",
-      "document_id": "8812001c-ff51-43aa-b531-bfba6099c337",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Αγία Φιλοθέη",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "610743b5-d91a-41a1-bb5b-16a0de3c1385",
-                "label": "Αγία Φιλοθέη, σχολικό βιβλίο",
-                "type": "pdf",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/interactive-books/template/index.html?book=A_Gymnasiou"
-              }
-            ]
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "678faf6d-b2d9-4742-b985-ca45387767af",
-                "label": "1000002932.jpg",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "7df294a469e1011ed5d130ce2e3670c41b92683f717c87f8af185cc9371a1429"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "eb32101e-aec7-411d-a4c5-8fd59280f748",
-                "label": "Εννοιολογικός Χάρτης της Αγίας Φιλοθέης (1).png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "c973bd4928ecbca720895b61d6da13c8dab1a99f0577c94aa350059601e07f0f"
-              },
-              {
-                "id": "49b00651-572a-5932-9110-fc70d6684d3d",
-                "label": "Αγία Φιλοθέη · εικονογραφημένος εννοιολογικός χάρτης",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "24a59804e5653d8671e61c44bf6b342fb07d635d154fa21a3a0552e72e6506b1"
-              }
-            ]
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "f5bfc910-89ca-4842-9423-f306db77447a",
-                "label": "saint-philothei-journey-preview.html",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "5fe5d7811c98a7cad04c75fa102c588138d64d3e5230cda5c1377fc753b41969"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "html",
-            "images",
-            "mindmap",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "94a04471-418d-413e-92cb-20a9d48c6765",
-      "document_id": "da405240-5387-4806-9c9a-590c8b387040",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Συνέπειες της πτώσης",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "1a943832-689a-4caa-bc9f-c0e70becd400",
-                "label": "Κείμενο σημειώσεων · ελεγμένο από τον εκπαιδευτικό",
-                "type": "text",
-                "page_start": 1,
-                "page_end": 1,
-                "text": "Ο άνθρωπος δίνει τα ονόματα, Γεν. 2, 15,19–20.\n\nΟι οδύνες μετά την παρακοή, Γεν. 3, 16–20\n\nΚαι στη γυναίκα είπε ο Θεός: «Θ’ αυξήσω κατά πολύ τη θλίψη και τους πόνους της κυοφορίας σου, και με πόνους θα γεννάς τα παιδιά σου. Η επιθυμία σου θα στρέφεται προς τον άντρα σου, αλλά αυτός θα σε εξουσιάζει».\n\nΜετά είπε στον Αδάμ: «Επειδή άκουσες τη γυναίκα σου κι έφαγες από το δέντρο, απ’ το οποίο σε είχα διατάξει να μη φας, καταραμένη θα είναι η γη εξαιτίας σου. Με μόχθο θα την καλλιεργείς σ’ όλη σου τη ζωή. Αγκάθια και τριβόλια θα σου βλασταίνει και θα τρως το χορτάρι του αγρού. Με τον ιδρώτα του προσώπου σου θα τρως το ψωμί σου, ώσπου να ξαναγυρίσεις στη γη από την οποία προήλθες, γιατί χώμα είσαι, και στο χώμα θα επιστρέψεις».\n\nΟ Αδάμ ονόμασε τότε τη γυναίκα του «Εύα», γιατί αυτή έγινε μητέρα όλης της ανθρωπότητας."
-              },
-              {
-                "id": "6cedd14b-eecb-4f31-a0d8-72b9ae36512e",
-                "label": "Πρωτότυπο · Συνέπειες της πτώσης Samsung Notes.jpg",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "71813c8dae96d32ee4acc61ec7ddba320c3e1be1c27624df10b8ede1a4b0b13b"
-              }
-            ]
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "cb2ff540-1647-4838-861e-880e9d3e471b",
-                "label": "Άσκηση με κενά · σελ. 1",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "7b1441b56cd7d1b688d0a8cb83b6936be198f0014b3343a0931305a7682ef1c4"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "13bb1f2d-d7ae-49f0-bed5-342ae282dd93",
-                "label": "HTML · Οι οδύνες μετά την παρακοή",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/odynes-mindmap.html"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "2ff75919-5b53-4f69-8880-ddf5b4bd7204",
-                "label": "Ερώτημα σύνθεσης",
-                "type": "text",
-                "page_start": 1,
-                "page_end": 1,
-                "text": "Ποιες συνέπειες της παρακοής αναφέρει το κείμενο για τις σχέσεις και τη ζωή του ανθρώπου;"
-              }
-            ]
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "26f6d861-ffd1-4f40-a2b1-f0a6d13f7112",
-      "document_id": "f0836256-c6b3-5cd2-bf25-b313e8f00e9a",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Αγία Γραφή και ενότητα των δύο Διαθηκών",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "7776aeb7-3fad-52d8-a740-dc6cadc6eafa",
-                "label": "Τυπολογία Παλαιάς Διαθήκης · άσκηση με κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "c04e7e3d798dddc2b076d7226538415548a09f4bab194153c26f27fa135cf1db"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "3f4c4426-7570-58b5-b32f-d130418868e2",
-                "label": "HTML · Το Δέντρο της Διαθήκης",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
-              },
-              {
-                "id": "d22eebbe-6765-5404-888e-303194e5c475",
+                "id": "62899aa3-d43f-5c93-a107-d14d0bcaf597",
                 "label": "Πίνακας διερεύνησης",
                 "type": "html",
                 "page_start": 1,
                 "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/Browser-vr/apps/investigation/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F71be2217caa3c23f96cc.json"
+                "url": "https://dporpatonelis-crypto.github.io/Browser-vr/apps/investigation/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F12ad1f1aa8bf2e6e4853.json"
+              },
+              {
+                "id": "d8beb082-6047-5b1d-8a72-d51d8139cc0e",
+                "label": "Χρονολόγιο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Map-Timeline/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F980fda8da5a1171fe093.json"
               }
             ]
           },
@@ -994,544 +220,6 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/theia-oikonomia-mindmap.html"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "24819f3c-34a9-494b-9fc1-c0f193d8b860",
-      "document_id": "62e785f1-2cd4-5df9-ac94-d4d82be82664",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Αβραάμ · πίστη και εμπιστοσύνη",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "d08d1c63-e9cb-594b-b476-998fac52fb83",
-                "label": "Αβραάμ · πίστη και εμπιστοσύνη · 7 κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "cbadb19a048ebfc49152f1c31e237b063a3187359ad76ec5b97928d25ae9840d"
-              },
-              {
-                "id": "5635099f-8a96-5a0d-a855-a38c15ccdbee",
-                "label": "Αβραάμ και πίστη στον Θεό · 6 κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "4fbe2dd652b689e4d20b8b1f8df9e6c482540c439e3da5e137312b9e16d45bcb"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "b44b87eb-92c3-4493-a7a6-18c4473edf6b",
-      "document_id": "ff5e306c-40a4-51f4-8236-824adddf946e",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Μωυσής–Έξοδος",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "07fe716d-1340-5e15-81f9-0f49d900e83d",
-                "label": "Μωυσής–Έξοδος · άσκηση με κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "ca84bbe6c01167aa7a71e05ae7172bff6ca0977a4f463d7088630f55f3b4853d"
-              },
-              {
-                "id": "d0d1ea9a-20a8-46f0-a925-06171b242028",
-                "label": "Ανθισμένη ράβδος του Ααρών.png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "bce1491cfd82c7ef39b3a7e686cf9229f1cee327c3995ed011dc952e81a80767"
-              },
-              {
-                "id": "f6cad8ea-5e06-4e26-ad76-8213307c5ca1",
-                "label": "Ανοιχτό χρυσό αγγείο με μάννα.png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "dd679807381eee09e42d358b052778777dcab6fe78a6d375dcc4cba4d3054e93"
-              },
-              {
-                "id": "7858c89f-eac9-435e-96f3-2fad9634534a",
-                "label": "Μωυσής, πλήρης τρισδιάστατη αναφορά χαρακτήρα.png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "e04314c26f8fecbc64fe2a5afc61286c7f5f3b4f4f2ef7b463ead2f8cf8a0006"
-              },
-              {
-                "id": "c64211d0-3379-48a8-a7cb-0eb7aadaee9e",
-                "label": "Χάλκινο φίδι σε ξύλινο στύλο.png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "c01de3b77abaa7971f1662cf274070105dfb7d396c2769c26c14d31452456299"
-              },
-              {
-                "id": "ba10bbf4-ba40-40f2-97ee-db416c525798",
-                "label": "Χρυσή Κιβωτός της Διαθήκης με Χερουβείμ.png",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "684ba968-bffc-48e0-9d09-176e7932b26e",
-                "label": "Πορεία του Μωυσή",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/Video_Page/lessons/old-testament/moses.html"
-              },
-              {
-                "id": "994580a0-d7aa-46bb-84da-d4b75ff1edbe",
-                "label": "Πορεία του Μωυσή βίντεο",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/moses-journey.mp4"
-              }
-            ]
-          },
-          {
-            "id": "synthesis",
-            "title": "Στοά σύνθεσης",
-            "icon": "🔗",
-            "box": {
-              "x": 0.56,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          }
-        ],
-        "annotations": [],
-        "registered": false,
-        "connections": [],
-        "presentation": {
-          "hide_empty": true,
-          "reveal_order": [
-            "text",
-            "images",
-            "mindmap",
-            "html",
-            "synthesis"
-          ]
-        }
-      }
-    },
-    {
-      "id": "8950df1f-134b-4165-9e3b-86de622b7ffa",
-      "document_id": "d15602cc-a42b-4c76-9577-0535b43cfa01",
-      "kind": "workspace",
-      "document": {
-        "schema_version": 1,
-        "title": "Ο χάρτης των μαθημάτων μου",
-        "grade": "Α΄ Γυμνασίου",
-        "verbs": [],
-        "lessons": [
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa20",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
-            "title": "Δημιουργία του ανθρώπου",
-            "canvas_id": "2fa8c59c-98b4-51d0-ae0b-eb5a275e69cf"
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa21",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa12",
-            "title": "Η παραβολή των ταλάντων",
-            "canvas_id": "eab8e20a-e8fe-5bce-bd59-0f88e74f77cf"
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa22",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
-            "title": "Άγιος Λουκάς ο Ιατρός",
-            "canvas_id": "07c90d03-c6fa-57af-983d-231d7cc26f1a"
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa23",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
-            "title": "Κατ’ εικόνα → Τάλαντα → Άγιος Λουκάς → Καθ’ ομοίωση",
-            "canvas_id": "d15602cc-a42b-4c76-9577-0535b43cfa02"
-          },
-          {
-            "id": "97695730-91ec-4e44-a85b-f5c2ea248c45",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
-            "title": "Αγία Φιλοθέη",
-            "canvas_id": "8812001c-ff51-43aa-b531-bfba6099c337"
-          },
-          {
-            "id": "4f94b65a-8403-47e8-9858-2ed473809ef2",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
-            "title": "Συνέπειες της πτώσης",
-            "canvas_id": "da405240-5387-4806-9c9a-590c8b387040"
-          },
-          {
-            "id": "c3b6598f-fe66-581c-9ae7-d1a23657f3d7",
-            "theme_id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
-            "title": "Αγία Γραφή και ενότητα των δύο Διαθηκών",
-            "canvas_id": "f0836256-c6b3-5cd2-bf25-b313e8f00e9a"
-          },
-          {
-            "id": "f6dfa985-d93b-52df-85b5-2c4ea5f2359c",
-            "theme_id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
-            "title": "Θεία Οικονομία",
-            "canvas_id": "c8522c1a-6c66-5e67-80b1-fb52c2a9b6a3"
-          },
-          {
-            "id": "6b465e73-3fd9-5808-a2be-3f7708579b74",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
-            "title": "Αβραάμ · πίστη και εμπιστοσύνη",
-            "canvas_id": "62e785f1-2cd4-5df9-ac94-d4d82be82664"
-          },
-          {
-            "id": "77405970-d96f-5ee3-91c8-4d4280648852",
-            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
-            "title": "Μωυσής–Έξοδος",
-            "canvas_id": "ff5e306c-40a4-51f4-8236-824adddf946e"
-          }
-        ],
-        "themes": [
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
-            "title": "Παλαιά Διαθήκη",
-            "icon": "📜",
-            "box": {
-              "x": 0.04,
-              "y": 0.02,
-              "w": 0.32,
-              "h": 0.4
-            }
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa12",
-            "title": "Παραβολές",
-            "icon": "🌾",
-            "box": {
-              "x": 0.065,
-              "y": 0.56,
-              "w": 0.32,
-              "h": 0.4
-            }
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
-            "title": "Βίοι Αγίων",
-            "icon": "🕯️",
-            "box": {
-              "x": 0.61,
-              "y": 0.56,
-              "w": 0.32,
-              "h": 0.4
-            }
-          },
-          {
-            "id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
-            "title": "Κατ’ εικόνα – Καθ’ ομοίωση",
-            "icon": "🌱",
-            "box": {
-              "x": 0.33,
-              "y": 0.29,
-              "w": 0.32,
-              "h": 0.4
-            }
-          },
-          {
-            "id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
-            "title": "Αγία Γραφή",
-            "icon": "📖",
-            "box": {
-              "x": 0.59,
-              "y": 0.02,
-              "w": 0.32,
-              "h": 0.4
-            }
-          }
-        ],
-        "connections": [
-          {
-            "id": "f42e01d0-8339-4ef2-9a85-3df792b8d6d6",
-            "from": "d15602cc-a42b-4c76-9577-0535b43cfa14",
-            "to": "d15602cc-a42b-4c76-9577-0535b43cfa12",
-            "verb": "ερμηνεύει",
-            "phrase": "",
-            "visible": true
-          }
-        ]
-      }
-    },
-    {
-      "id": "044070a6-0579-4580-a156-b16d444d0b4d",
-      "document_id": "167caddf-5a29-59d1-a2d9-65aba950d6ec",
-      "kind": "canvas",
-      "document": {
-        "schema_version": 1,
-        "title": "Πεντηκοστή και ζωή της πρώτης Εκκλησίας",
-        "grade": "Β΄ Γυμνασίου",
-        "verbs": [],
-        "buildings": [
-          {
-            "id": "text",
-            "title": "Βιβλιοθήκη κειμένου",
-            "icon": "📖",
-            "box": {
-              "x": 0.35,
-              "y": 0.015,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "images",
-            "title": "Πινακοθήκη εικόνων",
-            "icon": "🖼️",
-            "box": {
-              "x": 0.69,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "8620ad43-8be1-52b4-b930-a1b17da1081b",
-                "label": "Πεντηκοστή και πρώτη Εκκλησία · άσκηση με κενά",
-                "type": "image",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b"
-              }
-            ]
-          },
-          {
-            "id": "mindmap",
-            "title": "Σχολή εννοιών",
-            "icon": "💡",
-            "box": {
-              "x": 0.015,
-              "y": 0.29,
-              "w": 0.29,
-              "h": 0.35
-            },
-            "hidden": false,
-            "materials": []
-          },
-          {
-            "id": "html",
-            "title": "Εργαστήριο δραστηριοτήτων",
-            "icon": "✨",
-            "box": {
-              "x": 0.17,
-              "y": 0.65,
-              "w": 0.29,
-              "h": 0.34
-            },
-            "hidden": false,
-            "materials": [
-              {
-                "id": "d1804860-2472-537e-8415-5317b833f20a",
-                "label": "HTML · Πεντηκοστή — Το Πνεύμα συγκροτεί την Εκκλησία",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/pentecost-music-mindmap.html"
-              },
-              {
-                "id": "9a834919-f4fa-5a2a-be3c-babe5319bc3b",
-                "label": "HTML · Πεντηκοστή — Το Πνεύμα συγκροτεί την Εκκλησία",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "asset_id": "eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260"
-              },
-              {
-                "id": "62899aa3-d43f-5c93-a107-d14d0bcaf597",
-                "label": "Πίνακας διερεύνησης",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/Browser-vr/apps/investigation/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F12ad1f1aa8bf2e6e4853.json"
-              },
-              {
-                "id": "d8beb082-6047-5b1d-8a72-d51d8139cc0e",
-                "label": "Χρονολόγιο",
-                "type": "html",
-                "page_start": 1,
-                "page_end": 1,
-                "url": "https://dporpatonelis-crypto.github.io/Map-Timeline/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F980fda8da5a1171fe093.json"
               }
             ]
           },
@@ -4271,9 +2959,1507 @@
         ],
         "connections": []
       }
+    },
+    {
+      "id": "664eee00-b756-4c3a-b351-c426afcbe54b",
+      "document_id": "2fa8c59c-98b4-51d0-ae0b-eb5a275e69cf",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Δημιουργία του ανθρώπου",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "437fe1f3-6687-5367-b4e4-b6e5ad63b834",
+                "label": "Δημιουργία του ανθρώπου · άσκηση με κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "be0734ef-1008-56a0-8a8f-15dc8e087152",
+                "label": "HTML · Ο άνθρωπος: δώρο και κλήση",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+              },
+              {
+                "id": "993b2550-c342-5f25-a4c4-61363bea40a0",
+                "label": "Δημιουργία · Αναλόγιο εννοιών",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/apps/animated-concept-canvas/creation-concepts.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "d0cac706-1060-4b27-bf10-6e812b69b1fa",
+      "document_id": "eab8e20a-e8fe-5bce-bd59-0f88e74f77cf",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Η παραβολή των ταλάντων",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "92dbf624-ec06-5cd5-9453-a861e796928a",
+                "label": "Παραβολή των ταλάντων · άσκηση με κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "a5a89ab501e943d3b200fdd456383af513613f88ef5b041f5cd808249db22772"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "aeecd0ea-1875-56a9-905a-c0910991c8ce",
+                "label": "HTML · Η παραβολή των ταλάντων",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/talents-music-mindmap.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ccb63b86-7a93-402a-95ee-d29c25a1ad95",
+      "document_id": "07c90d03-c6fa-57af-983d-231d7cc26f1a",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Άγιος Λουκάς ο Ιατρός",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "23c119b3-564f-5ab2-aaf0-2fb51c159f64",
+                "label": "Άγιος Λουκάς ο Ιατρός · άσκηση με κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "abf092101985c0ea9f8d81eb8753a1b7183d45859f81f0243f1d3a1662e58421"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "95a95af7-fdec-5c98-aacd-6e8c968f3d1d",
+                "label": "HTML · Άγιος Λουκάς ο Ιατρός",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/saint-luke-journey.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "29271d59-2505-426f-9d6d-f0eb31a174c3",
+      "document_id": "d15602cc-a42b-4c76-9577-0535b43cfa02",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Κατ’ εικόνα → Τάλαντα → Άγιος Λουκάς → Καθ’ ομοίωση",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "8d988e55-db54-4cdc-884b-4dabed7234fd",
+                "label": "Δημιουργία του ανθρώπου · διδακτική απόδοση",
+                "type": "text",
+                "page_start": 1,
+                "page_end": 1,
+                "text": "Δημιουργία του ανθρώπου — Α΄ Γυμνασίου\nΔοσμένο υλικό του εκπαιδευτικού. Διδακτική απόδοση, όχι αυτούσιο πατερικό παράθεμα.\n\nΣύμφωνα με τον Άγιο Ιωάννη τον Δαμασκηνό, ο Θεός δημιούργησε τον άνθρωπο με σώμα από τη γη και ψυχή με τη θεία πνοή Του.\nΤο σώμα και η ψυχή δημιουργήθηκαν ταυτόχρονα.\nΟ άνθρωπος πλάστηκε «κατ’ εικόνα» Θεού, δηλαδή με λογική σκέψη και ελευθερία να επιλέγει.\nΤο «καθ’ ομοίωσιν» σημαίνει ότι ο άνθρωπος καλείται να μοιάσει στον Θεό καλλιεργώντας τις αρετές.\nΟ άνθρωπος ενώνει μέσα του τον υλικό και τον πνευματικό κόσμο και έχει ευθύνη για τη δημιουργία.\nΣκοπός της ζωής του είναι να πλησιάζει τον Θεό και να συμμετέχει στη θεία ζωή με τη χάρη Του.\n\nΑπαντήσεις στα κενά: σώμα · ψυχή · ταυτόχρονα · ελευθερία · αρετές · πνευματικό · Θεό · χάρη.\n"
+              },
+              {
+                "id": "16a274f0-6730-4f7f-bb40-fb95d7eb1cb5",
+                "label": "Η παραβολή των ταλάντων · Μτ 25, 14–30",
+                "type": "text",
+                "page_start": 1,
+                "page_end": 1,
+                "text": "Η παραβολή των ταλάντων (Μτ 25, 14­30)\n\nΗ βασιλεία του Θεού μοιάζει μ’ έναν άνθρωπο ο οποίος, φεύγοντας για ταξίδι, κάλεσε τους\nδούλους του και τους εμπιστεύτηκε τα υπάρχοντά του. Σ’ άλλον έδωσε πέντε τάλαντα, σ’ άλλον δύο, σ’ άλλον ένα, στον καθένα ανάλογα με την ικανότητά του, κι έφυγε αμέσως για το\nταξίδι. Αυτός που έλαβε τα πέντε τάλαντα πήγε, τα εκμεταλλεύτηκε και κέρδισε άλλα πέντε.\nΚι εκείνος που έλαβε τα δύο τάλαντα κέρδισε επίσης άλλα δύο. Εκείνος όμως που έλαβε το\nένα τάλαντο πήγε κι έσκαψε στη γη και έκρυψε τα χρήματα του κυρίου του.\n\nΎστερα από ένα μεγάλο χρονικό διάστημα, γύρισε ο κύριος εκείνων των δούλων και έκανε\nλογαριασμό μαζί τους. Παρουσιάστηκε τότε εκείνος που είχε λάβει τα πέντε τάλαντα και του\nέφερε άλλα πέντε λέγοντας: «Κύριε, μου εμπιστεύτηκες πέντε τάλαντα∙ κοίτα, κέρδισα με αυτά άλλα πέντε». Του είπε ο κύριός του: «Εύγε, καλέ και έμπιστε δούλε! Αποδείχτηκες αξιόπιστος σε μικρές υποθέσεις, γι’ αυτό θα σου εμπιστευτώ μεγαλύτερες. Έλα να γιορτάσεις μαζί\nμου». Παρουσιάστηκε κι ο άλλος με τα δύο τάλαντα και είπε: «Κύριε, μου εμπιστεύτηκες δύο\nτάλαντα∙ κοίτα, κέρδισα άλλα δύο. Του είπε ο κύριος του: «εύγε, καλέ και έμπιστε δούλε! Αποδείχτηκες αξιόπιστος σε μικρές υποθέσεις, γι’ αυτό θα σου εμπιστευτώ μεγαλύτερες. Έλα να\nγιορτάσεις μαζί μου». Παρουσιάστηκε κι εκείνος που είχε λάβει το ένα τάλαντο και είπε:\n«Κύριε, ήξερα πως είσαι σκληρός άνθρωπος. Θερίζεις εκεί όπου δεν έσπειρες και συνάζεις\nκαρπούς εκεί που δε φύτεψες. Γι’ αυτό φοβήθηκα και πήγα και έκρυψα το τάλαντό σου στη\nγη. Να τα λεφτά σου. Και του αποκρίθηκε ο κύριός του: «Δούλε κακέ και οκνηρέ, ήξερες πως\nθερίζω όπου δεν έσπειρα, και συνάζω καρπούς απ’ όπου δε φύτεψα! Τότε έπρεπε να βάλεις\nτα χρήματά μου στην τράπεζα κι εγώ, όταν θα γυρνούσα πίσω, θα τα έπαιρνα με τόκο. Πάρτε\nτου, λοιπόν, το τάλαντο και δώστε το σ’ αυτόν που είχε τα δέκα τάλαντα. Γιατί σε καθέναν\nπου έχει, θα του δοθεί με το παραπάνω και θα ’χει περίσσευμα∙ ενώ απ’ όποιον δεν έχει, θα\nτου πάρουν και τα λίγα που έχει».\n"
+              }
+            ]
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "a9d01fcf-ad42-467f-ab22-d564498227c3",
+                "label": "Κατ’ εικόνα · λογική και ελευθερία",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "00cf7783f3408e13e4a9e5c14c332556c66afa5a3a26c51fb9ff1a5be974557d"
+              },
+              {
+                "id": "915d845c-8256-41d6-b9a7-cac901237976",
+                "label": "Άγιος Λουκάς ο Ιατρός · γνώση, πίστη, προσφορά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "dab693f73f51c12347ba4c037a1741b8e4a8382a680e52277680cfa8ff31a87b"
+              },
+              {
+                "id": "8dc98097-8a11-4601-9529-cf864f472788",
+                "label": "Καθ’ ομοίωση · αρετές και χάρη",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "015592a39949b4c978078289ec80238a0aa84f40350113b116718773f1c7a71c"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "382be01c-4b7c-492d-bfdb-a6b506069e7d",
+                "label": "Η διαδρομή από το κατ’ εικόνα στο καθ’ ομοίωση",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "4af0a36188176656aa1033b8b0015f4e4a61f07ece08b07a75a1e0fca6163bb9"
+              }
+            ]
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "77ea6828-d0d3-45ea-8efe-466573449cce",
+                "label": "Η γνωστική μας διαδρομή — Από το κατ’ εικόνα στο καθ’ ομοίωση",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "8c20090f83e1094ad0650aed64234c8188ecb68cd634db004b8c5fceb8ceb0c3"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "c5c963bb-5cac-48bd-8cac-64a9311b8db4",
+                "label": "Το ερώτημα της σύνθεσης",
+                "type": "text",
+                "page_start": 1,
+                "page_end": 1,
+                "text": "Ποια δυνατότητά σου μπορείς να καλλιεργήσεις και να προσφέρεις στους άλλους; Σύνδεσε το παράδειγμά σου με τα Τάλαντα, τον Άγιο Λουκά και την πορεία προς το καθ’ ομοίωση."
+              }
+            ]
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [
+          {
+            "id": "a1f3a66b-c5af-4395-a8aa-c73ce7ef9f5b",
+            "from": "text",
+            "to": "images",
+            "verb": "φανερώνει",
+            "phrase": "Η λογική και η ελευθερία είναι δώρα που καλούμαστε να καλλιεργήσουμε.",
+            "visible": true
+          },
+          {
+            "id": "a659137c-6bbb-47d0-8728-9a0e637be87a",
+            "from": "mindmap",
+            "to": "html",
+            "verb": "καλλιεργεί",
+            "phrase": "Από τα χαρίσματα και την ευθύνη περνάμε στην προσφορά προς τον άλλον.",
+            "visible": true
+          },
+          {
+            "id": "38063695-aa72-4b30-bae5-72c22081b96b",
+            "from": "html",
+            "to": "synthesis",
+            "verb": "εφαρμόζεται στη ζωή",
+            "phrase": "Ο άγιος Λουκάς αξιοποιεί τη γνώση της ιατρικής ως έμπρακτη προσφορά.",
+            "visible": true
+          }
+        ],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "0974f074-0777-4527-bbe4-5d29e0cfacea",
+      "document_id": "8812001c-ff51-43aa-b531-bfba6099c337",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Αγία Φιλοθέη",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "610743b5-d91a-41a1-bb5b-16a0de3c1385",
+                "label": "Αγία Φιλοθέη, σχολικό βιβλίο",
+                "type": "pdf",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/template/index.html?book=A_Gymnasiou"
+              }
+            ]
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "678faf6d-b2d9-4742-b985-ca45387767af",
+                "label": "1000002932.jpg",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "7df294a469e1011ed5d130ce2e3670c41b92683f717c87f8af185cc9371a1429"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "eb32101e-aec7-411d-a4c5-8fd59280f748",
+                "label": "Εννοιολογικός Χάρτης της Αγίας Φιλοθέης (1).png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "c973bd4928ecbca720895b61d6da13c8dab1a99f0577c94aa350059601e07f0f"
+              },
+              {
+                "id": "49b00651-572a-5932-9110-fc70d6684d3d",
+                "label": "Αγία Φιλοθέη · εικονογραφημένος εννοιολογικός χάρτης",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "24a59804e5653d8671e61c44bf6b342fb07d635d154fa21a3a0552e72e6506b1"
+              }
+            ]
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "f5bfc910-89ca-4842-9423-f306db77447a",
+                "label": "saint-philothei-journey-preview.html",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "5fe5d7811c98a7cad04c75fa102c588138d64d3e5230cda5c1377fc753b41969"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "html",
+            "images",
+            "mindmap",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "94a04471-418d-413e-92cb-20a9d48c6765",
+      "document_id": "da405240-5387-4806-9c9a-590c8b387040",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Συνέπειες της πτώσης",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "1a943832-689a-4caa-bc9f-c0e70becd400",
+                "label": "Κείμενο σημειώσεων · ελεγμένο από τον εκπαιδευτικό",
+                "type": "text",
+                "page_start": 1,
+                "page_end": 1,
+                "text": "Ο άνθρωπος δίνει τα ονόματα, Γεν. 2, 15,19–20.\n\nΟι οδύνες μετά την παρακοή, Γεν. 3, 16–20\n\nΚαι στη γυναίκα είπε ο Θεός: «Θ’ αυξήσω κατά πολύ τη θλίψη και τους πόνους της κυοφορίας σου, και με πόνους θα γεννάς τα παιδιά σου. Η επιθυμία σου θα στρέφεται προς τον άντρα σου, αλλά αυτός θα σε εξουσιάζει».\n\nΜετά είπε στον Αδάμ: «Επειδή άκουσες τη γυναίκα σου κι έφαγες από το δέντρο, απ’ το οποίο σε είχα διατάξει να μη φας, καταραμένη θα είναι η γη εξαιτίας σου. Με μόχθο θα την καλλιεργείς σ’ όλη σου τη ζωή. Αγκάθια και τριβόλια θα σου βλασταίνει και θα τρως το χορτάρι του αγρού. Με τον ιδρώτα του προσώπου σου θα τρως το ψωμί σου, ώσπου να ξαναγυρίσεις στη γη από την οποία προήλθες, γιατί χώμα είσαι, και στο χώμα θα επιστρέψεις».\n\nΟ Αδάμ ονόμασε τότε τη γυναίκα του «Εύα», γιατί αυτή έγινε μητέρα όλης της ανθρωπότητας."
+              },
+              {
+                "id": "6cedd14b-eecb-4f31-a0d8-72b9ae36512e",
+                "label": "Πρωτότυπο · Συνέπειες της πτώσης Samsung Notes.jpg",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "71813c8dae96d32ee4acc61ec7ddba320c3e1be1c27624df10b8ede1a4b0b13b"
+              }
+            ]
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "cb2ff540-1647-4838-861e-880e9d3e471b",
+                "label": "Άσκηση με κενά · σελ. 1",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "7b1441b56cd7d1b688d0a8cb83b6936be198f0014b3343a0931305a7682ef1c4"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "13bb1f2d-d7ae-49f0-bed5-342ae282dd93",
+                "label": "HTML · Οι οδύνες μετά την παρακοή",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/odynes-mindmap.html"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "2ff75919-5b53-4f69-8880-ddf5b4bd7204",
+                "label": "Ερώτημα σύνθεσης",
+                "type": "text",
+                "page_start": 1,
+                "page_end": 1,
+                "text": "Ποιες συνέπειες της παρακοής αναφέρει το κείμενο για τις σχέσεις και τη ζωή του ανθρώπου;"
+              }
+            ]
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "26f6d861-ffd1-4f40-a2b1-f0a6d13f7112",
+      "document_id": "f0836256-c6b3-5cd2-bf25-b313e8f00e9a",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Αγία Γραφή και ενότητα των δύο Διαθηκών",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "7776aeb7-3fad-52d8-a740-dc6cadc6eafa",
+                "label": "Τυπολογία Παλαιάς Διαθήκης · άσκηση με κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "c04e7e3d798dddc2b076d7226538415548a09f4bab194153c26f27fa135cf1db"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "3f4c4426-7570-58b5-b32f-d130418868e2",
+                "label": "HTML · Το Δέντρο της Διαθήκης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/dentro-diathikis-puzzle.html"
+              },
+              {
+                "id": "d22eebbe-6765-5404-888e-303194e5c475",
+                "label": "Πίνακας διερεύνησης",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Browser-vr/apps/investigation/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F71be2217caa3c23f96cc.json"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "24819f3c-34a9-494b-9fc1-c0f193d8b860",
+      "document_id": "62e785f1-2cd4-5df9-ac94-d4d82be82664",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Αβραάμ · πίστη και εμπιστοσύνη",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "d08d1c63-e9cb-594b-b476-998fac52fb83",
+                "label": "Αβραάμ · πίστη και εμπιστοσύνη · 7 κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "cbadb19a048ebfc49152f1c31e237b063a3187359ad76ec5b97928d25ae9840d"
+              },
+              {
+                "id": "5635099f-8a96-5a0d-a855-a38c15ccdbee",
+                "label": "Αβραάμ και πίστη στον Θεό · 6 κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "4fbe2dd652b689e4d20b8b1f8df9e6c482540c439e3da5e137312b9e16d45bcb"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "b44b87eb-92c3-4493-a7a6-18c4473edf6b",
+      "document_id": "ff5e306c-40a4-51f4-8236-824adddf946e",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Μωυσής–Έξοδος",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "07fe716d-1340-5e15-81f9-0f49d900e83d",
+                "label": "Μωυσής–Έξοδος · άσκηση με κενά",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "ca84bbe6c01167aa7a71e05ae7172bff6ca0977a4f463d7088630f55f3b4853d"
+              },
+              {
+                "id": "d0d1ea9a-20a8-46f0-a925-06171b242028",
+                "label": "Ανθισμένη ράβδος του Ααρών.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "bce1491cfd82c7ef39b3a7e686cf9229f1cee327c3995ed011dc952e81a80767"
+              },
+              {
+                "id": "f6cad8ea-5e06-4e26-ad76-8213307c5ca1",
+                "label": "Ανοιχτό χρυσό αγγείο με μάννα.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "dd679807381eee09e42d358b052778777dcab6fe78a6d375dcc4cba4d3054e93"
+              },
+              {
+                "id": "7858c89f-eac9-435e-96f3-2fad9634534a",
+                "label": "Μωυσής, πλήρης τρισδιάστατη αναφορά χαρακτήρα.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "e04314c26f8fecbc64fe2a5afc61286c7f5f3b4f4f2ef7b463ead2f8cf8a0006"
+              },
+              {
+                "id": "c64211d0-3379-48a8-a7cb-0eb7aadaee9e",
+                "label": "Χάλκινο φίδι σε ξύλινο στύλο.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "c01de3b77abaa7971f1662cf274070105dfb7d396c2769c26c14d31452456299"
+              },
+              {
+                "id": "ba10bbf4-ba40-40f2-97ee-db416c525798",
+                "label": "Χρυσή Κιβωτός της Διαθήκης με Χερουβείμ.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e"
+              }
+            ]
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "684ba968-bffc-48e0-9d09-176e7932b26e",
+                "label": "Πορεία του Μωυσή",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Video_Page/lessons/old-testament/moses.html"
+              },
+              {
+                "id": "994580a0-d7aa-46bb-84da-d4b75ff1edbe",
+                "label": "Πορεία του Μωυσή βίντεο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/moses-journey.mp4"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "8a866736-deec-4d71-96ae-e61b4b6c1683",
+      "document_id": "31a15eac-a4f4-4561-bce3-98daf501f279",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Η πορεία του Δαυίδ",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "ae229499-1860-43ff-a17c-efcf6c0bc835",
+                "label": "Πορεία του Δαυίδ",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/old-testament-journeys/david-journey.mp4"
+              },
+              {
+                "id": "13ca9d44-8731-492a-9260-e912708fb37c",
+                "label": "Digital Book · Η πορεία του Δαυίδ",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/#section-david-journey"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "9dd40101-91a6-4d50-ae54-da7c2316cb27",
+      "document_id": "d15602cc-a42b-4c76-9577-0535b43cfa01",
+      "kind": "workspace",
+      "document": {
+        "schema_version": 1,
+        "title": "Ο χάρτης των μαθημάτων μου",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "lessons": [
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa20",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
+            "title": "Δημιουργία του ανθρώπου",
+            "canvas_id": "2fa8c59c-98b4-51d0-ae0b-eb5a275e69cf"
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa21",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa12",
+            "title": "Η παραβολή των ταλάντων",
+            "canvas_id": "eab8e20a-e8fe-5bce-bd59-0f88e74f77cf"
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa22",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
+            "title": "Άγιος Λουκάς ο Ιατρός",
+            "canvas_id": "07c90d03-c6fa-57af-983d-231d7cc26f1a"
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa23",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
+            "title": "Κατ’ εικόνα → Τάλαντα → Άγιος Λουκάς → Καθ’ ομοίωση",
+            "canvas_id": "d15602cc-a42b-4c76-9577-0535b43cfa02"
+          },
+          {
+            "id": "97695730-91ec-4e44-a85b-f5c2ea248c45",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
+            "title": "Αγία Φιλοθέη",
+            "canvas_id": "8812001c-ff51-43aa-b531-bfba6099c337"
+          },
+          {
+            "id": "4f94b65a-8403-47e8-9858-2ed473809ef2",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Συνέπειες της πτώσης",
+            "canvas_id": "da405240-5387-4806-9c9a-590c8b387040"
+          },
+          {
+            "id": "c3b6598f-fe66-581c-9ae7-d1a23657f3d7",
+            "theme_id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
+            "title": "Αγία Γραφή και ενότητα των δύο Διαθηκών",
+            "canvas_id": "f0836256-c6b3-5cd2-bf25-b313e8f00e9a"
+          },
+          {
+            "id": "f6dfa985-d93b-52df-85b5-2c4ea5f2359c",
+            "theme_id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
+            "title": "Θεία Οικονομία",
+            "canvas_id": "c8522c1a-6c66-5e67-80b1-fb52c2a9b6a3"
+          },
+          {
+            "id": "6b465e73-3fd9-5808-a2be-3f7708579b74",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Αβραάμ · πίστη και εμπιστοσύνη",
+            "canvas_id": "62e785f1-2cd4-5df9-ac94-d4d82be82664"
+          },
+          {
+            "id": "77405970-d96f-5ee3-91c8-4d4280648852",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Μωυσής–Έξοδος",
+            "canvas_id": "ff5e306c-40a4-51f4-8236-824adddf946e"
+          },
+          {
+            "id": "93f01ff3-9f12-4465-b348-fce7f4ff3b3a",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Η πορεία του Δαυίδ",
+            "canvas_id": "31a15eac-a4f4-4561-bce3-98daf501f279"
+          }
+        ],
+        "themes": [
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Παλαιά Διαθήκη",
+            "icon": "📜",
+            "box": {
+              "x": 0.04,
+              "y": 0.02,
+              "w": 0.32,
+              "h": 0.4
+            }
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa12",
+            "title": "Παραβολές",
+            "icon": "🌾",
+            "box": {
+              "x": 0.065,
+              "y": 0.56,
+              "w": 0.32,
+              "h": 0.4
+            }
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa13",
+            "title": "Βίοι Αγίων",
+            "icon": "🕯️",
+            "box": {
+              "x": 0.61,
+              "y": 0.56,
+              "w": 0.32,
+              "h": 0.4
+            }
+          },
+          {
+            "id": "d15602cc-a42b-4c76-9577-0535b43cfa14",
+            "title": "Κατ’ εικόνα – Καθ’ ομοίωση",
+            "icon": "🌱",
+            "box": {
+              "x": 0.33,
+              "y": 0.29,
+              "w": 0.32,
+              "h": 0.4
+            }
+          },
+          {
+            "id": "5a6372c0-0b05-5b09-9ad2-e110839bb55b",
+            "title": "Αγία Γραφή",
+            "icon": "📖",
+            "box": {
+              "x": 0.59,
+              "y": 0.02,
+              "w": 0.32,
+              "h": 0.4
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": "f42e01d0-8339-4ef2-9a85-3df792b8d6d6",
+            "from": "d15602cc-a42b-4c76-9577-0535b43cfa14",
+            "to": "d15602cc-a42b-4c76-9577-0535b43cfa12",
+            "verb": "ερμηνεύει",
+            "phrase": "",
+            "visible": true
+          }
+        ]
+      }
     }
   ],
   "assets": {
+    "1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b": {
+      "path": "media/1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b.jpg",
+      "mime": "image/jpeg"
+    },
+    "eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260": {
+      "path": "media/eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260.html",
+      "mime": "text/html"
+    },
+    "4f71627399c72eb270483d980bbf25b60f3f9226b7314aa984a8d3402e5bfc7d": {
+      "path": "media/4f71627399c72eb270483d980bbf25b60f3f9226b7314aa984a8d3402e5bfc7d.png",
+      "mime": "image/png"
+    },
+    "97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed": {
+      "path": "media/97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed.png",
+      "mime": "image/png"
+    },
+    "50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d": {
+      "path": "media/50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d.png",
+      "mime": "image/png"
+    },
+    "c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372": {
+      "path": "media/c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372.png",
+      "mime": "image/png"
+    },
+    "3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe": {
+      "path": "media/3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe.png",
+      "mime": "image/png"
+    },
+    "120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff": {
+      "path": "media/120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff.png",
+      "mime": "image/png"
+    },
+    "83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e": {
+      "path": "media/83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e.png",
+      "mime": "image/png"
+    },
+    "8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1": {
+      "path": "media/8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1.png",
+      "mime": "image/png"
+    },
+    "a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b": {
+      "path": "media/a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b.png",
+      "mime": "image/png"
+    },
+    "967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7": {
+      "path": "media/967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7.png",
+      "mime": "image/png"
+    },
+    "48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d": {
+      "path": "media/48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d.png",
+      "mime": "image/png"
+    },
+    "e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683": {
+      "path": "media/e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683.png",
+      "mime": "image/png"
+    },
+    "569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2": {
+      "path": "media/569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2.html",
+      "mime": "text/html"
+    },
+    "aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2": {
+      "path": "media/aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2.jpg",
+      "mime": "image/jpeg"
+    },
+    "6e43e630be1832d32bd2c4716228533ff0579e848bee5d089a3599fac1776479": {
+      "path": "media/6e43e630be1832d32bd2c4716228533ff0579e848bee5d089a3599fac1776479.jpg",
+      "mime": "image/jpeg"
+    },
+    "46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca": {
+      "path": "media/46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca.png",
+      "mime": "image/png"
+    },
     "17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f": {
       "path": "media/17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f.jpg",
       "mime": "image/jpeg"
@@ -4334,10 +4520,6 @@
       "path": "media/c04e7e3d798dddc2b076d7226538415548a09f4bab194153c26f27fa135cf1db.jpg",
       "mime": "image/jpeg"
     },
-    "4f71627399c72eb270483d980bbf25b60f3f9226b7314aa984a8d3402e5bfc7d": {
-      "path": "media/4f71627399c72eb270483d980bbf25b60f3f9226b7314aa984a8d3402e5bfc7d.png",
-      "mime": "image/png"
-    },
     "cbadb19a048ebfc49152f1c31e237b063a3187359ad76ec5b97928d25ae9840d": {
       "path": "media/cbadb19a048ebfc49152f1c31e237b063a3187359ad76ec5b97928d25ae9840d.jpg",
       "mime": "image/jpeg"
@@ -4368,74 +4550,6 @@
     },
     "b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e": {
       "path": "media/b32f93e1ed350bf3635f46eea0a78a4d73b9f472c3835543133d5d9f90d3849e.png",
-      "mime": "image/png"
-    },
-    "1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b": {
-      "path": "media/1452fb175cd452da7d7e34a34f570fcfe4da5679be10c066b347029792135d0b.jpg",
-      "mime": "image/jpeg"
-    },
-    "eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260": {
-      "path": "media/eb8856f79b0a6336a4182cb5aea914ff7c7198e88323bde41b4997b959034260.html",
-      "mime": "text/html"
-    },
-    "97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed": {
-      "path": "media/97f5a81735ef19b1515f476b1b510606e51a1638a7b90471a58b6647e9c569ed.png",
-      "mime": "image/png"
-    },
-    "50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d": {
-      "path": "media/50e9f8c75f490d41158dc7c705e8dcf51f06744a7897e869d60c48e69384048d.png",
-      "mime": "image/png"
-    },
-    "c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372": {
-      "path": "media/c4d79752789061efe8aa4d73b97ddcc4ca432f3269f311b8a4e3e999f157d372.png",
-      "mime": "image/png"
-    },
-    "3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe": {
-      "path": "media/3c424f61045ffff914ad089375e8b1943945a457c632abee1dc7ebdca5a000fe.png",
-      "mime": "image/png"
-    },
-    "120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff": {
-      "path": "media/120297538ecaf070293a21056cfa83e10194d537b91a1f2cf102f042a1fd9bff.png",
-      "mime": "image/png"
-    },
-    "83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e": {
-      "path": "media/83ebc59eda014cb3441c796a2e47fccb7673f835f97d31775b3289477d7ca53e.png",
-      "mime": "image/png"
-    },
-    "8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1": {
-      "path": "media/8738000b683513a38ba89c40b7eceef8575d6effaf51a1b54f98c6611104c9d1.png",
-      "mime": "image/png"
-    },
-    "a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b": {
-      "path": "media/a771d64b257d5fcbfe6029bf7f44ba9341a24a4c33a99ff6250b63a653fed51b.png",
-      "mime": "image/png"
-    },
-    "967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7": {
-      "path": "media/967f450455a1e1fd3a3f6b722c2efc74cd56d9f12422e76ea6338e3baf4e85f7.png",
-      "mime": "image/png"
-    },
-    "48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d": {
-      "path": "media/48fa19259d83c4d35635d197f3cf5940af9aebfa19ce3b71abd4a2edc585ad3d.png",
-      "mime": "image/png"
-    },
-    "e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683": {
-      "path": "media/e97caccd1e65af92adbe10e86fb0e9ba24f3248c06e26daa6005f71f3f1b5683.png",
-      "mime": "image/png"
-    },
-    "569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2": {
-      "path": "media/569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2.html",
-      "mime": "text/html"
-    },
-    "aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2": {
-      "path": "media/aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2.jpg",
-      "mime": "image/jpeg"
-    },
-    "6e43e630be1832d32bd2c4716228533ff0579e848bee5d089a3599fac1776479": {
-      "path": "media/6e43e630be1832d32bd2c4716228533ff0579e848bee5d089a3599fac1776479.jpg",
-      "mime": "image/jpeg"
-    },
-    "46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca": {
-      "path": "media/46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca.png",
       "mime": "image/png"
     }
   },
