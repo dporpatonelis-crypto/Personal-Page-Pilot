@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "11e1e24dbd4f4679896732f3db0c38e7",
+  "release_id": "f4fed3318ce9410f8b61ca17c048ed46",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -3868,7 +3868,7 @@
       }
     },
     {
-      "id": "24819f3c-34a9-494b-9fc1-c0f193d8b860",
+      "id": "b2ec8680-8c60-4a6e-8ef3-b0d87de0409e",
       "document_id": "62e785f1-2cd4-5df9-ac94-d4d82be82664",
       "kind": "canvas",
       "document": {
@@ -3944,7 +3944,16 @@
               "h": 0.34
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "fd1cf79b-2da9-4624-8d1a-8d38ac6a6eb5",
+                "label": "Πορεία του Αβραάμ βίντεο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/old-testament-journeys/abraham-journey.mp4?v=20261015-two-hands"
+              }
+            ]
           },
           {
             "id": "synthesis",
@@ -4241,7 +4250,107 @@
       }
     },
     {
-      "id": "9dd40101-91a6-4d50-ae54-da7c2316cb27",
+      "id": "aa8752eb-ad1c-44c5-9e3d-41f3545a9711",
+      "document_id": "9e8cdb87-72d0-4b53-97f5-a62927e768be",
+      "kind": "canvas",
+      "document": {
+        "schema_version": 1,
+        "title": "Η πορεία του Ηλία",
+        "grade": "Α΄ Γυμνασίου",
+        "verbs": [],
+        "buildings": [
+          {
+            "id": "text",
+            "title": "Βιβλιοθήκη κειμένου",
+            "icon": "📖",
+            "box": {
+              "x": 0.35,
+              "y": 0.015,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "images",
+            "title": "Πινακοθήκη εικόνων",
+            "icon": "🖼️",
+            "box": {
+              "x": 0.69,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "mindmap",
+            "title": "Σχολή εννοιών",
+            "icon": "💡",
+            "box": {
+              "x": 0.015,
+              "y": 0.29,
+              "w": 0.29,
+              "h": 0.35
+            },
+            "hidden": false,
+            "materials": []
+          },
+          {
+            "id": "html",
+            "title": "Εργαστήριο δραστηριοτήτων",
+            "icon": "✨",
+            "box": {
+              "x": 0.17,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": [
+              {
+                "id": "590d6c87-ce63-4bc0-8913-c7b399a87b38",
+                "label": "Πορεία του Ηλία βίντεο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/old-testament-journeys/elijah-journey.mp4"
+              }
+            ]
+          },
+          {
+            "id": "synthesis",
+            "title": "Στοά σύνθεσης",
+            "icon": "🔗",
+            "box": {
+              "x": 0.56,
+              "y": 0.65,
+              "w": 0.29,
+              "h": 0.34
+            },
+            "hidden": false,
+            "materials": []
+          }
+        ],
+        "annotations": [],
+        "registered": false,
+        "connections": [],
+        "presentation": {
+          "hide_empty": true,
+          "reveal_order": [
+            "text",
+            "images",
+            "mindmap",
+            "html",
+            "synthesis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bf82d98b-bee9-412f-a698-0e987cb2584b",
       "document_id": "d15602cc-a42b-4c76-9577-0535b43cfa01",
       "kind": "workspace",
       "document": {
@@ -4315,6 +4424,12 @@
             "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
             "title": "Η πορεία του Δαυίδ",
             "canvas_id": "31a15eac-a4f4-4561-bce3-98daf501f279"
+          },
+          {
+            "id": "580dad68-e7b0-4d3e-90d8-a10a8d0c1da3",
+            "theme_id": "d15602cc-a42b-4c76-9577-0535b43cfa10",
+            "title": "Η πορεία του Ηλία",
+            "canvas_id": "9e8cdb87-72d0-4b53-97f5-a62927e768be"
           }
         ],
         "themes": [
@@ -4323,10 +4438,10 @@
             "title": "Παλαιά Διαθήκη",
             "icon": "📜",
             "box": {
-              "x": 0.04,
-              "y": 0.02,
-              "w": 0.32,
-              "h": 0.4
+              "x": -0.07272836205181099,
+              "y": -0.002708085100608444,
+              "w": 0.4255489491630465,
+              "h": 0.5314266055038352
             }
           },
           {
