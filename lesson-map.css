@@ -52,11 +52,19 @@
 
 .lm-workspace-layout {
   display: grid;
-  grid-template-columns: clamp(16rem, 24vw, 21rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
 }
+@media (min-width: 1101px) {
+  .lm-workspace-layout:has(> .lm-lesson-list:not([hidden])) {
+    grid-template-columns: clamp(16rem, 24vw, 21rem) minmax(0, 1fr);
+  }
+}
+.lm-breadcrumb:has(.lm-lesson-list-toggle) { flex-wrap: wrap; }
+.lm-lesson-list-toggle { user-select: none; }
+.lm-lesson-list-toggle > span { display: inline-block; }
+.lm-lesson-list-toggle[aria-expanded="true"] > span { transform: rotate(180deg); }
 .lm-lesson-list {
-  display: grid;
   gap: 16px;
   min-width: 0;
   padding: 16px;
@@ -64,17 +72,8 @@
   background: var(--lm-island-surface, #fbf8ff);
   color: var(--lm-island-ink, #393052);
 }
-.lm-lesson-list-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-.lm-lesson-list h2,
-.lm-lesson-list h3 { margin: 0; }
-.lm-lesson-list h2 { font-size: 1.05rem; }
-.lm-lesson-list h3 { font-size: .92rem; overflow-wrap: anywhere; }
+.lm-lesson-list:not([hidden]) { display: grid; }
+.lm-lesson-list h3 { margin: 0; font-size: .92rem; overflow-wrap: anywhere; }
 .lm-lesson-group ul {
   display: grid;
   gap: 5px;
@@ -89,16 +88,14 @@
   text-align: start;
   overflow-wrap: anywhere;
 }
-.lesson-map .lm-lesson-list-heading > button {
+.lesson-map .lm-lesson-list-map {
   display: none;
   font-size: .85rem;
 }
 
 @media (max-width: 1100px) {
-  .lm-workspace-layout { grid-template-columns: minmax(0, 1fr); }
   .lm-lesson-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
-  .lm-lesson-list-heading { grid-column: 1 / -1; }
-  .lesson-map .lm-lesson-list-heading > button { display: block; }
+  .lesson-map .lm-lesson-list-map { display: block; grid-column: 1 / -1; justify-self: end; }
   #classroom-map .lm-workspace-layout .lm-viewport { scroll-margin-block-start: 11rem; }
 }
 
