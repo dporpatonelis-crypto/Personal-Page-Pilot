@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "f6890fb80271414b9f3a1a34b67b3796",
+  "release_id": "a79c3f7f496d4e999afbb945fdd9f4c7",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "id": "0c43cd91-b430-4b0b-88c2-8ad49b107dfc",
+      "id": "b44b87eb-92c3-4493-a7a6-18c4473edf6b",
       "document_id": "ff5e306c-40a4-51f4-8236-824adddf946e",
       "kind": "canvas",
       "document": {
@@ -1251,6 +1251,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/Video_Page/lessons/old-testament/moses.html"
+              },
+              {
+                "id": "994580a0-d7aa-46bb-84da-d4b75ff1edbe",
+                "label": "Πορεία του Μωυσή βίντεο",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/interactive-books/Digital_Lessons/assets/moses-journey.mp4"
               }
             ]
           },
