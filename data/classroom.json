@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "b586e5bdfbbe4c209739e2b6cdb6d2e3",
+  "release_id": "be9fc7c36a2a4c79b939d2c024e4bdce",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -1017,7 +1017,7 @@
       }
     },
     {
-      "id": "644ad236-5702-4aa2-80b9-da0b6c220422",
+      "id": "c3fbc714-fa5f-4978-99b5-1beffcda00ae",
       "document_id": "e7844952-aa3f-5cd4-ba8e-5725cc5fcaed",
       "kind": "canvas",
       "document": {
@@ -1050,7 +1050,16 @@
               "h": 0.35
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "259a3b9c-1b67-4721-b0e0-147371fc265f",
+                "label": "Μ. Βασίλειος κενά.jpg",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "f2d56ca17f2de542da8563becec6c514bc0883a051e55826e40e0d110c7e7d13"
+              }
+            ]
           },
           {
             "id": "mindmap",
@@ -1063,7 +1072,16 @@
               "h": 0.35
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "1f76413b-3df2-4cc3-8b9d-f36c94dd2e94",
+                "label": "Μ. Βασίλειος.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "3368bb9c3426d3dfdd1388c60010c274e6729190457dbbb9e4f7525384d1078e"
+              }
+            ]
           },
           {
             "id": "html",
@@ -1133,7 +1151,7 @@
       }
     },
     {
-      "id": "9282f6a8-f65d-4881-81ab-3831d165b054",
+      "id": "bd855a64-07b1-42ab-a96d-ccf2b08583f5",
       "document_id": "b88e96dc-9ba4-563b-bdcb-8d290a5d14da",
       "kind": "canvas",
       "document": {
@@ -1166,7 +1184,16 @@
               "h": 0.35
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "dbdf8fb3-62be-424a-905d-c6d1f737d7c1",
+                "label": "Γρηγόριος Θεολόγος κενά.jpg",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "479bd9323dd0f3febb45cb80545caaf19b481446a8122d858f01ce7d23e38a47"
+              }
+            ]
           },
           {
             "id": "mindmap",
@@ -1179,7 +1206,16 @@
               "h": 0.35
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "b33aa00c-063a-4c16-b8d6-a97abfc34bcb",
+                "label": "Γρηγόριος mindmap.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "4d4c316dc74a0409c3fa02fd0b5c8adb46b0368cc74fe748bed9adebcb2c216b"
+              }
+            ]
           },
           {
             "id": "html",
@@ -4562,6 +4598,22 @@
     "569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2": {
       "path": "media/569dd4d22ad3394fa3e9bac505fef124da10f8498b0db057dd63112ba06411d2.html",
       "mime": "text/html"
+    },
+    "f2d56ca17f2de542da8563becec6c514bc0883a051e55826e40e0d110c7e7d13": {
+      "path": "media/f2d56ca17f2de542da8563becec6c514bc0883a051e55826e40e0d110c7e7d13.jpg",
+      "mime": "image/jpeg"
+    },
+    "3368bb9c3426d3dfdd1388c60010c274e6729190457dbbb9e4f7525384d1078e": {
+      "path": "media/3368bb9c3426d3dfdd1388c60010c274e6729190457dbbb9e4f7525384d1078e.png",
+      "mime": "image/png"
+    },
+    "479bd9323dd0f3febb45cb80545caaf19b481446a8122d858f01ce7d23e38a47": {
+      "path": "media/479bd9323dd0f3febb45cb80545caaf19b481446a8122d858f01ce7d23e38a47.jpg",
+      "mime": "image/jpeg"
+    },
+    "4d4c316dc74a0409c3fa02fd0b5c8adb46b0368cc74fe748bed9adebcb2c216b": {
+      "path": "media/4d4c316dc74a0409c3fa02fd0b5c8adb46b0368cc74fe748bed9adebcb2c216b.png",
+      "mime": "image/png"
     },
     "aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2": {
       "path": "media/aab22a46efd9fc0f7205b5864c5c4ad00ebdcd23f056d163bf6f3d5297d3fee2.jpg",
