@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "fb9f37a881824e628a533f2ca1b2638c",
+  "release_id": "eb61ef14bb0b4c62b738c7ad152f97ef",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "id": "a6d6db19-905d-458b-886b-b4e860f65b71",
+      "id": "8dbc1427-360a-4ffd-8d95-15efc60ae3af",
       "document_id": "ff5e306c-40a4-51f4-8236-824adddf946e",
       "kind": "canvas",
       "document": {
@@ -1203,7 +1203,16 @@
               "h": 0.34
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "684ba968-bffc-48e0-9d09-176e7932b26e",
+                "label": "Πορεία του Μωυσή",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/Video_Page/lessons/old-testament/moses.html"
+              }
+            ]
           },
           {
             "id": "synthesis",
