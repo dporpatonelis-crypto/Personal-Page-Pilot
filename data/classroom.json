@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "be9fc7c36a2a4c79b939d2c024e4bdce",
+  "release_id": "ae513edc6d7b4a96bbdde151a642c977",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -2812,7 +2812,7 @@
       }
     },
     {
-      "id": "889c47a2-78f5-4462-8ad2-e2e97bc099d8",
+      "id": "d3899e37-e9a5-4e21-bb6c-0170fdf6c5e3",
       "document_id": "d3ffc54d-c0e4-49e7-b1f2-9e4947845413",
       "kind": "canvas",
       "document": {
@@ -2845,7 +2845,16 @@
               "h": 0.35
             },
             "hidden": false,
-            "materials": []
+            "materials": [
+              {
+                "id": "6d0651ea-94fb-4e1b-9c78-86d21f525314",
+                "label": "Βυζαντινός πίνακας φιλοσοφίας και πίστης.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "ccae16eadb253e9fe9f2732a83e3b75398839bc52f0ebdbf28a0bc127e40ee41"
+              }
+            ]
           },
           {
             "id": "mindmap",
@@ -3652,7 +3661,7 @@
       }
     },
     {
-      "id": "94a04471-418d-413e-92cb-20a9d48c6765",
+      "id": "658984b0-5d4d-4d7e-a654-180a8d2cd6a0",
       "document_id": "da405240-5387-4806-9c9a-590c8b387040",
       "kind": "canvas",
       "document": {
@@ -3710,6 +3719,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "asset_id": "7b1441b56cd7d1b688d0a8cb83b6936be198f0014b3343a0931305a7682ef1c4"
+              },
+              {
+                "id": "54268558-db34-4286-b5d3-a424b8ac6a7b",
+                "label": "Βαβέλ με κενά.png",
+                "type": "image",
+                "page_start": 1,
+                "page_end": 1,
+                "asset_id": "0413ec7f9812322a4d2965daf77b5744462b164f45454356937274c288265815"
               }
             ]
           },
@@ -3745,6 +3762,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/odynes-mindmap.html"
+              },
+              {
+                "id": "20d8672c-c8f1-440a-9b9a-008b98cb6913",
+                "label": "Πύργος της Βαβέλ",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/pyrgos-tis-vavel.html"
               }
             ]
           },
@@ -4627,6 +4652,10 @@
       "path": "media/46f71674b7246284c49c8817ac038d450082958986cbbfb1823b076fa70385ca.png",
       "mime": "image/png"
     },
+    "ccae16eadb253e9fe9f2732a83e3b75398839bc52f0ebdbf28a0bc127e40ee41": {
+      "path": "media/ccae16eadb253e9fe9f2732a83e3b75398839bc52f0ebdbf28a0bc127e40ee41.png",
+      "mime": "image/png"
+    },
     "17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f": {
       "path": "media/17d920f8c137d2f5bee9bc9fe6f3e1bf78ee2630229db1c64c4319c35210f97f.jpg",
       "mime": "image/jpeg"
@@ -4681,6 +4710,10 @@
     },
     "7b1441b56cd7d1b688d0a8cb83b6936be198f0014b3343a0931305a7682ef1c4": {
       "path": "media/7b1441b56cd7d1b688d0a8cb83b6936be198f0014b3343a0931305a7682ef1c4.png",
+      "mime": "image/png"
+    },
+    "0413ec7f9812322a4d2965daf77b5744462b164f45454356937274c288265815": {
+      "path": "media/0413ec7f9812322a4d2965daf77b5744462b164f45454356937274c288265815.png",
       "mime": "image/png"
     },
     "c04e7e3d798dddc2b076d7226538415548a09f4bab194153c26f27fa135cf1db": {
