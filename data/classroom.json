@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "3511283ac1ec48a188926aa461cd4eb3",
+  "release_id": "9013781b48614de0a8678707f5d83747",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -1159,7 +1159,7 @@
       }
     },
     {
-      "id": "bd855a64-07b1-42ab-a96d-ccf2b08583f5",
+      "id": "1ee1f98a-1697-4078-98af-55bcbe54c6e2",
       "document_id": "b88e96dc-9ba4-563b-bdcb-8d290a5d14da",
       "kind": "canvas",
       "document": {
@@ -1260,6 +1260,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/patristic-scripture-cross-references.html"
+              },
+              {
+                "id": "b7dc9c85-cc68-4801-9149-a233d7323500",
+                "label": "Webxr Γρηγόριος Θεολόγος",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/sacred-blueprint-webxr/lessons/saint-gregory-theologian-journey/"
               }
             ]
           },
