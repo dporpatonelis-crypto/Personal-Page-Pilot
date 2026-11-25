@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "ae513edc6d7b4a96bbdde151a642c977",
+  "release_id": "3511283ac1ec48a188926aa461cd4eb3",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -909,7 +909,7 @@
       }
     },
     {
-      "id": "2af2adf8-a2e7-42bf-b119-f5b66d248879",
+      "id": "dd52b15c-2b9d-4958-b16e-543dc24e36af",
       "document_id": "266df61a-f1b4-5599-b367-7e3adedf1455",
       "kind": "canvas",
       "document": {
@@ -984,6 +984,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/saint-athanasius-journey.html"
+              },
+              {
+                "id": "7b73be9c-26f5-47eb-8811-50581d9f8a62",
+                "label": "Aθανάσιος webxr",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/sacred-blueprint-webxr/lessons/saint-athanasius-journey/"
               }
             ]
           },
