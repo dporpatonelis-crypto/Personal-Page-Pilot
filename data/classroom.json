@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_id": "9013781b48614de0a8678707f5d83747",
+  "release_id": "52bc302008124c03b1b590d3f2e669a6",
   "grades": [
     "Α΄ Γυμνασίου",
     "Β΄ Γυμνασίου",
@@ -11,7 +11,7 @@
   ],
   "documents": [
     {
-      "id": "044070a6-0579-4580-a156-b16d444d0b4d",
+      "id": "4509a079-5ee2-415c-aad2-5d4da19491f5",
       "document_id": "167caddf-5a29-59d1-a2d9-65aba950d6ec",
       "kind": "canvas",
       "document": {
@@ -111,6 +111,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/Map-Timeline/?dataUrl=https%3A%2F%2Fdporpatonelis-crypto.github.io%2FBrowser-vr%2Fdata%2Factivities%2F980fda8da5a1171fe093.json"
+              },
+              {
+                "id": "7b9ea8f8-6eca-412a-ae53-c47bb9a2746c",
+                "label": "webxr Πεντηκοστή και ύμνος",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/sacred-blueprint-webxr/lessons/pentecost-journey/"
               }
             ]
           },
@@ -1025,7 +1033,7 @@
       }
     },
     {
-      "id": "c3fbc714-fa5f-4978-99b5-1beffcda00ae",
+      "id": "90fcec03-c5f9-4df8-8b52-d68831703c63",
       "document_id": "e7844952-aa3f-5cd4-ba8e-5725cc5fcaed",
       "kind": "canvas",
       "document": {
@@ -1126,6 +1134,14 @@
                 "page_start": 1,
                 "page_end": 1,
                 "url": "https://dporpatonelis-crypto.github.io/digital-library-core/lessons/athens-history-mindmap.html"
+              },
+              {
+                "id": "4caede6d-32cf-4059-a227-ec17eab289ec",
+                "label": "Βασίλειος webxr",
+                "type": "html",
+                "page_start": 1,
+                "page_end": 1,
+                "url": "https://dporpatonelis-crypto.github.io/sacred-blueprint-webxr/lessons/saint-basil-the-great-journey/"
               }
             ]
           },
